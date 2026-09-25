@@ -1,4 +1,8 @@
 <nodes>
-    <node id="west" x="0" y="0" type="priority"/>
-    <node id="east" x="5000" y="0" type="priority"/>
+    <node id="n0" x="0"    y="0" type="priority"/>
+    <node id="n1" x="1000" y="0" type="priority"/>
+    <node id="n2" x="2000" y="0" type="priority"/>
+    <node id="n3" x="3000" y="0" type="priority"/>
+    <node id="n4" x="4000" y="0" type="priority"/>
+    <node id="n5" x="5000" y="0" type="priority"/>
 </nodes>

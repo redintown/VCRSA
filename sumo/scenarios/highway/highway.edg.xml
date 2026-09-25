@@ -1,17 +1,36 @@
 <edges>
-    <edge
-        id="west_to_east"
-        from="west"
-        to="east"
-        numLanes="3"
-        speed="27.78"
-        priority="1"/>
 
-    <edge
-        id="east_to_west"
-        from="east"
-        to="west"
-        numLanes="3"
-        speed="27.78"
-        priority="1"/>
+    <!-- Eastbound -->
+    <edge id="e0_east" from="n0" to="n1"
+          numLanes="3" speed="27.78" priority="1"/>
+
+    <edge id="e1_east" from="n1" to="n2"
+          numLanes="3" speed="27.78" priority="1"/>
+
+    <edge id="e2_east" from="n2" to="n3"
+          numLanes="3" speed="27.78" priority="1"/>
+
+    <edge id="e3_east" from="n3" to="n4"
+          numLanes="3" speed="27.78" priority="1"/>
+
+    <edge id="e4_east" from="n4" to="n5"
+          numLanes="3" speed="27.78" priority="1"/>
+
+
+    <!-- Westbound -->
+    <edge id="e4_west" from="n5" to="n4"
+          numLanes="3" speed="27.78" priority="1"/>
+
+    <edge id="e3_west" from="n4" to="n3"
+          numLanes="3" speed="27.78" priority="1"/>
+
+    <edge id="e2_west" from="n3" to="n2"
+          numLanes="3" speed="27.78" priority="1"/>
+
+    <edge id="e1_west" from="n2" to="n1"
+          numLanes="3" speed="27.78" priority="1"/>
+
+    <edge id="e0_west" from="n1" to="n0"
+          numLanes="3" speed="27.78" priority="1"/>
+
 </edges>

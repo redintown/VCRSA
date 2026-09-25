@@ -1,57 +1,108 @@
 import csv
 import os
-import sys
 import traci
 
 
-# --------------------------------------------------
+# ============================================================
 # Configuration
-# --------------------------------------------------
+# ============================================================
 
-SUMO_CONFIG = os.path.abspath(
-    os.path.join(
-        os.path.dirname(__file__),
-        "../scenarios/highway/highway.sumocfg"
-    )
+PROJECT_ROOT = os.path.abspath(
+    os.path.join(os.path.dirname(__file__), "../..")
 )
 
-OUTPUT_CSV = os.path.abspath(
-    os.path.join(
-        os.path.dirname(__file__),
-        "../datasets/highway/raw/highway_mobility.csv"
-    )
+SUMO_CONFIG = os.path.join(
+    PROJECT_ROOT,
+    "sumo/scenarios/highway/highway.sumocfg"
+)
+
+OUTPUT_CSV = os.path.join(
+    PROJECT_ROOT,
+    "sumo/datasets/highway/raw/highway_mobility.csv"
 )
 
 STEP_LENGTH = 1.0
 
 
-# --------------------------------------------------
-# Start SUMO
-# --------------------------------------------------
+# ============================================================
+# Zone mapping
+# ============================================================
 
-sumo_binary = "sumo"
+ZONE_MAP = {
+    "e0_east": 0,
+    "e0_west": 0,
+
+    "e1_east": 1,
+    "e1_west": 1,
+
+    "e2_east": 2,
+    "e2_west": 2,
+
+    "e3_east": 3,
+    "e3_west": 3,
+
+    "e4_east": 4,
+    "e4_west": 4,
+}
+
+
+# ============================================================
+# Direction mapping
+# ============================================================
+
+DIRECTION_MAP = {
+    "e0_east": "EAST",
+    "e1_east": "EAST",
+    "e2_east": "EAST",
+    "e3_east": "EAST",
+    "e4_east": "EAST",
+
+    "e4_west": "WEST",
+    "e3_west": "WEST",
+    "e2_west": "WEST",
+    "e1_west": "WEST",
+    "e0_west": "WEST",
+}
+
+
+# ============================================================
+# Start SUMO
+# ============================================================
+
+print("Starting SUMO...")
 
 traci.start([
-    sumo_binary,
+    "sumo",
     "-c",
     SUMO_CONFIG,
     "--step-length",
     str(STEP_LENGTH),
 ])
 
+print("SUMO connected through TraCI.")
 
-# --------------------------------------------------
+
+# ============================================================
 # Prepare output directory
-# --------------------------------------------------
+# ============================================================
 
-os.makedirs(os.path.dirname(OUTPUT_CSV), exist_ok=True)
+os.makedirs(
+    os.path.dirname(OUTPUT_CSV),
+    exist_ok=True
+)
 
 
-# --------------------------------------------------
-# CSV writer
-# --------------------------------------------------
+# ============================================================
+# Generate CSV
+# ============================================================
 
-with open(OUTPUT_CSV, "w", newline="") as csv_file:
+row_count = 0
+
+with open(
+    OUTPUT_CSV,
+    "w",
+    newline=""
+) as csv_file:
 
     writer = csv.writer(csv_file)
 
@@ -66,11 +117,12 @@ with open(OUTPUT_CSV, "w", newline="") as csv_file:
         "lane_id",
         "road_id",
         "direction",
+        "zone_id",
     ])
 
-    # --------------------------------------------------
+    # --------------------------------------------------------
     # Simulation loop
-    # --------------------------------------------------
+    # --------------------------------------------------------
 
     while traci.simulation.getMinExpectedNumber() > 0:
 
@@ -82,9 +134,13 @@ with open(OUTPUT_CSV, "w", newline="") as csv_file:
 
         for vehicle_id in vehicle_ids:
 
-            x, y = traci.vehicle.getPosition(vehicle_id)
+            x, y = traci.vehicle.getPosition(
+                vehicle_id
+            )
 
-            speed = traci.vehicle.getSpeed(vehicle_id)
+            speed = traci.vehicle.getSpeed(
+                vehicle_id
+            )
 
             acceleration = traci.vehicle.getAcceleration(
                 vehicle_id
@@ -101,11 +157,17 @@ with open(OUTPUT_CSV, "w", newline="") as csv_file:
             road_id = traci.vehicle.getRoadID(
                 vehicle_id
             )
+            
+            if road_id not in ZONE_MAP:
+                continue
+            direction = DIRECTION_MAP.get(
+                road_id,
+                "UNKNOWN"
+            )
 
-            direction = traci.vehicle.getDrivingDistance2D(
-                vehicle_id,
-                x,
-                y,
+            zone_id = ZONE_MAP.get(
+                road_id,
+                -1
             )
 
             writer.writerow([
@@ -119,17 +181,27 @@ with open(OUTPUT_CSV, "w", newline="") as csv_file:
                 lane_id,
                 road_id,
                 direction,
+                zone_id,
             ])
 
+            row_count += 1
 
-# --------------------------------------------------
+
+# ============================================================
 # Close TraCI
-# --------------------------------------------------
+# ============================================================
 
 traci.close()
 
+
+# ============================================================
+# Summary
+# ============================================================
+
 print()
-print("========================================")
+print("==============================================")
 print("Mobility dataset generation completed")
-print("========================================")
-print(f"Output: {OUTPUT_CSV}")
+print("==============================================")
+print(f"Rows generated : {row_count}")
+print(f"Output file    : {OUTPUT_CSV}")
+print("==============================================")

@@ -1,0 +1,17 @@
+<edges>
+    <edge
+        id="west_to_east"
+        from="west"
+        to="east"
+        numLanes="3"
+        speed="27.78"
+        priority="1"/>
+
+    <edge
+        id="east_to_west"
+        from="east"
+        to="west"
+        numLanes="3"
+        speed="27.78"
+        priority="1"/>
+</edges>

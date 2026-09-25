@@ -12,17 +12,23 @@
         speedDev="0.1"
         guiShape="passenger"/>
 
-    <!-- Eastbound -->
+    <!-- ==========================================
+         EASTBOUND: Zone 0 → Zone 4
+         ========================================== -->
     <route
         id="route_eastbound"
-        edges="west_to_east"/>
+        edges="e0_east e1_east e2_east e3_east e4_east"/>
 
-    <!-- Westbound -->
+    <!-- ==========================================
+         WESTBOUND: Zone 4 → Zone 0
+         ========================================== -->
     <route
         id="route_westbound"
-        edges="east_to_west"/>
+        edges="e4_west e3_west e2_west e1_west e0_west"/>
 
-    <!-- Eastbound traffic: 900 veh/hour -->
+    <!-- ==========================================
+         Eastbound traffic
+         ========================================== -->
     <flow
         id="eastbound_flow"
         type="car"
@@ -33,7 +39,9 @@
         departLane="best"
         departSpeed="max"/>
 
-    <!-- Westbound traffic: 900 veh/hour -->
+    <!-- ==========================================
+         Westbound traffic
+         ========================================== -->
     <flow
         id="westbound_flow"
         type="car"
