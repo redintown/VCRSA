@@ -1,0 +1,80 @@
+# ==========================================
+# Python
+# ==========================================
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Python tooling
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# ==========================================
+# IDE / Editors
+# ==========================================
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ==========================================
+# OS
+# ==========================================
+.DS_Store
+Thumbs.db
+
+# ==========================================
+# SUMO generated files
+# ==========================================
+*.netstate.xml
+*.tripinfo.xml
+*.fcd.xml
+*.rou.alt.xml
+*.emissions.xml
+*.dump.xml
+*.log
+
+# SUMO simulation outputs
+sumo/datasets/*/raw/*.csv
+sumo/datasets/*/processed/*
+sumo/scenarios/*/*.netstate.xml
+
+# ==========================================
+# Machine Learning
+# ==========================================
+ml/checkpoints/
+*.pt
+*.pth
+*.ckpt
+*.h5
+*.keras
+
+# ==========================================
+# Experiment results
+# ==========================================
+results/raw/
+results/processed/
+results/figures/
+results/tables/
+
+# ==========================================
+# Temporary files
+# ==========================================
+*.tmp
+*.temp
+*.bak
+*.cache
+
+# ==========================================
+# Secrets / environment variables
+# ==========================================
+.env
+.env.*
+!.env.example

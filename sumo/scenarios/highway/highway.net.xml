@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2026-09-25T16:42:48.925860+06:00 by Eclipse SUMO netconvert 1.27.1
+<netconvertConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
+
+    <input>
+        <node-files value="highway.nod.xml"/>
+        <edge-files value="highway.edg.xml"/>
+    </input>
+
+    <output>
+        <output-file value="highway.net.xml"/>
+    </output>
+
+</netconvertConfiguration>
+-->
+
+<net version="1.20" junctionCornerDetail="5" limitTurnSpeed="5.50" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/net_file.xsd">
+
+    <location netOffset="0.00,0.00" convBoundary="0.00,0.00,5000.00,0.00" origBoundary="0.00,0.00,5000.00,0.00" projParameter="!"/>
+
+    <edge id=":east_0" function="internal">
+        <lane id=":east_0_0" index="0" speed="3.65" length="4.67" shape="5000.00,-1.60 5001.20,-0.80 5001.60,0.00 5001.20,0.80 5000.00,1.60"/>
+    </edge>
+    <edge id=":west_0" function="internal">
+        <lane id=":west_0_0" index="0" speed="3.65" length="4.67" shape="0.00,1.60 -1.20,0.80 -1.60,0.00 -1.20,-0.80 0.00,-1.60"/>
+    </edge>
+
+    <edge id="east_to_west" from="east" to="west" priority="1">
+        <lane id="east_to_west_0" index="0" speed="27.78" length="5000.00" shape="5000.00,8.00 0.00,8.00"/>
+        <lane id="east_to_west_1" index="1" speed="27.78" length="5000.00" shape="5000.00,4.80 0.00,4.80"/>
+        <lane id="east_to_west_2" index="2" speed="27.78" length="5000.00" shape="5000.00,1.60 0.00,1.60"/>
+    </edge>
+    <edge id="west_to_east" from="west" to="east" priority="1">
+        <lane id="west_to_east_0" index="0" speed="27.78" length="5000.00" shape="0.00,-8.00 5000.00,-8.00"/>
+        <lane id="west_to_east_1" index="1" speed="27.78" length="5000.00" shape="0.00,-4.80 5000.00,-4.80"/>
+        <lane id="west_to_east_2" index="2" speed="27.78" length="5000.00" shape="0.00,-1.60 5000.00,-1.60"/>
+    </edge>
+
+    <junction id="east" type="priority" x="5000.00" y="0.00" incLanes="west_to_east_0 west_to_east_1 west_to_east_2" intLanes=":east_0_0" shape="5000.00,0.00 5000.00,-9.60 5000.00,0.00">
+        <request index="0" response="0" foes="0" cont="0"/>
+    </junction>
+    <junction id="west" type="priority" x="0.00" y="0.00" incLanes="east_to_west_0 east_to_west_1 east_to_west_2" intLanes=":west_0_0" shape="0.00,0.00 0.00,9.60 0.00,0.00">
+        <request index="0" response="0" foes="0" cont="0"/>
+    </junction>
+
+    <connection from="east_to_west" to="west_to_east" fromLane="2" toLane="2" via=":west_0_0" dir="t" state="M"/>
+    <connection from="west_to_east" to="east_to_west" fromLane="2" toLane="2" via=":east_0_0" dir="t" state="M"/>
+
+    <connection from=":east_0" to="east_to_west" fromLane="0" toLane="2" dir="t" state="M"/>
+    <connection from=":west_0" to="west_to_east" fromLane="0" toLane="2" dir="t" state="M"/>
+
+</net>

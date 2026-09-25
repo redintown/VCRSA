@@ -1,0 +1,47 @@
+<routes>
+
+    <vType
+        id="car"
+        accel="2.6"
+        decel="4.5"
+        sigma="0.5"
+        length="5.0"
+        minGap="2.5"
+        maxSpeed="27.78"
+        speedFactor="1.0"
+        speedDev="0.1"
+        guiShape="passenger"/>
+
+    <!-- Eastbound -->
+    <route
+        id="route_eastbound"
+        edges="west_to_east"/>
+
+    <!-- Westbound -->
+    <route
+        id="route_westbound"
+        edges="east_to_west"/>
+
+    <!-- Eastbound traffic: 900 veh/hour -->
+    <flow
+        id="eastbound_flow"
+        type="car"
+        route="route_eastbound"
+        begin="0"
+        end="600"
+        vehsPerHour="900"
+        departLane="best"
+        departSpeed="max"/>
+
+    <!-- Westbound traffic: 900 veh/hour -->
+    <flow
+        id="westbound_flow"
+        type="car"
+        route="route_westbound"
+        begin="0"
+        end="600"
+        vehsPerHour="900"
+        departLane="best"
+        departSpeed="max"/>
+
+</routes>
