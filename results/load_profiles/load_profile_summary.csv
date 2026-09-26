@@ -1,0 +1,4 @@
+load_profile,cpu_request,memory_request_gb,storage_request_gb,providers_used,prt_duration_s,v6_cases,v6_successes,v6_success_rate
+sparse,10,20,250,1,28.77,1,1,100.00
+baseline,20,40,500,3,19.92,3,3,100.00
+heavy,30,60,750,5,17.11,5,5,100.00
