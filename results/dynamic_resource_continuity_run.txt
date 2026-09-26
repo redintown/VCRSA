@@ -1,0 +1,1861 @@
+============================================================
+ NS-3 DYNAMIC LSTM RESOURCE CONTINUITY
+============================================================
+
+Mobility records: 57634
+LSTM prediction records: 35323
+[ZONE TRANSITION] t=38.00s vehicle=eastbound_flow.0 0 -> 1
+[ZONE TRANSITION] t=41.00s vehicle=westbound_flow.0 4 -> 3
+[ZONE TRANSITION] t=42.00s vehicle=eastbound_flow.1 0 -> 1
+[ZONE TRANSITION] t=42.00s vehicle=westbound_flow.1 4 -> 3
+[ZONE TRANSITION] t=46.00s vehicle=eastbound_flow.2 0 -> 1
+[ZONE TRANSITION] t=50.00s vehicle=eastbound_flow.3 0 -> 1
+[ZONE TRANSITION] t=54.00s vehicle=westbound_flow.2 4 -> 3
+[ZONE TRANSITION] t=55.00s vehicle=westbound_flow.3 4 -> 3
+[ZONE TRANSITION] t=57.00s vehicle=eastbound_flow.4 0 -> 1
+[ZONE TRANSITION] t=58.00s vehicle=eastbound_flow.5 0 -> 1
+[ZONE TRANSITION] t=58.00s vehicle=westbound_flow.5 4 -> 3
+[ZONE TRANSITION] t=60.00s vehicle=westbound_flow.4 4 -> 3
+[ZONE TRANSITION] t=62.00s vehicle=eastbound_flow.6 0 -> 1
+[ZONE TRANSITION] t=62.00s vehicle=westbound_flow.6 4 -> 3
+[ZONE TRANSITION] t=67.00s vehicle=eastbound_flow.7 0 -> 1
+[ZONE TRANSITION] t=69.00s vehicle=westbound_flow.7 4 -> 3
+[ZONE TRANSITION] t=73.00s vehicle=westbound_flow.8 4 -> 3
+[ZONE TRANSITION] t=74.00s vehicle=westbound_flow.9 4 -> 3
+[ZONE TRANSITION] t=75.00s vehicle=eastbound_flow.0 1 -> 2
+[ZONE TRANSITION] t=75.00s vehicle=eastbound_flow.8 0 -> 1
+[ZONE TRANSITION] t=77.00s vehicle=eastbound_flow.9 0 -> 1
+[ZONE TRANSITION] t=78.00s vehicle=eastbound_flow.10 0 -> 1
+[ZONE TRANSITION] t=78.00s vehicle=westbound_flow.10 4 -> 3
+[ZONE TRANSITION] t=79.00s vehicle=eastbound_flow.1 1 -> 2
+[ZONE TRANSITION] t=79.00s vehicle=westbound_flow.1 3 -> 2
+[ZONE TRANSITION] t=80.00s vehicle=westbound_flow.0 3 -> 2
+[ZONE TRANSITION] t=83.00s vehicle=eastbound_flow.11 0 -> 1
+[ZONE TRANSITION] t=83.00s vehicle=eastbound_flow.2 1 -> 2
+
+[TENANCY START]
+  Time       : 86.00s
+  Provider   : eastbound_flow.19
+  Zone       : 0
+  CPU        : 8.00
+  LSTM residency: 27.78s
+[ZONE TRANSITION] t=87.00s vehicle=eastbound_flow.3 1 -> 2
+[ZONE TRANSITION] t=87.00s vehicle=westbound_flow.11 4 -> 3
+[LSTM REFRESH] t=90.00s provider=eastbound_flow.19 zone=0 predicted_remaining=23.91s elapsed=4.00s
+[ZONE TRANSITION] t=92.00s vehicle=westbound_flow.12 4 -> 3
+[ZONE TRANSITION] t=92.00s vehicle=westbound_flow.13 4 -> 3
+[ZONE TRANSITION] t=93.00s vehicle=eastbound_flow.13 0 -> 1
+[ZONE TRANSITION] t=94.00s vehicle=eastbound_flow.12 0 -> 1
+[ZONE TRANSITION] t=94.00s vehicle=eastbound_flow.14 0 -> 1
+[ZONE TRANSITION] t=95.00s vehicle=eastbound_flow.5 1 -> 2
+[ZONE TRANSITION] t=95.00s vehicle=westbound_flow.5 3 -> 2
+[ZONE TRANSITION] t=96.00s vehicle=eastbound_flow.4 1 -> 2
+[ZONE TRANSITION] t=97.00s vehicle=westbound_flow.14 4 -> 3
+[ZONE TRANSITION] t=97.00s vehicle=westbound_flow.3 3 -> 2
+[ZONE TRANSITION] t=98.00s vehicle=eastbound_flow.15 0 -> 1
+[ZONE TRANSITION] t=98.00s vehicle=westbound_flow.15 4 -> 3
+[ZONE TRANSITION] t=99.00s vehicle=eastbound_flow.6 1 -> 2
+[ZONE TRANSITION] t=99.00s vehicle=westbound_flow.2 3 -> 2
+[ZONE TRANSITION] t=99.00s vehicle=westbound_flow.6 3 -> 2
+[LSTM REFRESH] t=100.00s provider=eastbound_flow.19 zone=0 predicted_remaining=14.17s elapsed=14.00s
+[ZONE TRANSITION] t=102.00s vehicle=eastbound_flow.16 0 -> 1
+[ZONE TRANSITION] t=102.00s vehicle=westbound_flow.16 4 -> 3
+[ZONE TRANSITION] t=104.00s vehicle=eastbound_flow.7 1 -> 2
+[ZONE TRANSITION] t=104.00s vehicle=westbound_flow.4 3 -> 2
+[ZONE TRANSITION] t=106.00s vehicle=eastbound_flow.17 0 -> 1
+[ZONE TRANSITION] t=106.00s vehicle=westbound_flow.17 4 -> 3
+[ZONE TRANSITION] t=109.00s vehicle=westbound_flow.7 3 -> 2
+[ZONE TRANSITION] t=110.00s vehicle=westbound_flow.18 4 -> 3
+
+[PREDICTIVE HANDOVER TRIGGER]
+  Time       : 110.00s
+  Provider   : eastbound_flow.19
+  Zone       : 0
+  LSTM prediction: 4.03s
+  Margin     : 5.00s
+
+[PRE-DEPARTURE HANDOVER]
+  Handover #     : 1
+  Source provider : eastbound_flow.19
+  Standby provider: eastbound_flow.25
+  Source zone     : 0
+  Standby zone    : 0
+  Standby CPU     : 8.00
+  LSTM residency  : 34.40s
+  Security        : VERIFIED
+  Resource        : CONTINUOUS
+[HANDOVER RESULT] SUCCESS
+[NEW PRIMARY] Provider=eastbound_flow.25 Prediction=34.40s
+[ZONE TRANSITION] t=111.00s vehicle=eastbound_flow.18 0 -> 1
+[ZONE TRANSITION] t=111.00s vehicle=westbound_flow.9 3 -> 2
+[ZONE TRANSITION] t=112.00s vehicle=eastbound_flow.0 2 -> 3
+[ZONE TRANSITION] t=112.00s vehicle=westbound_flow.8 3 -> 2
+[ZONE TRANSITION] t=114.00s vehicle=eastbound_flow.19 0 -> 1
+[ZONE TRANSITION] t=115.00s vehicle=eastbound_flow.10 1 -> 2
+[ZONE TRANSITION] t=115.00s vehicle=westbound_flow.10 3 -> 2
+[ZONE TRANSITION] t=116.00s vehicle=eastbound_flow.1 2 -> 3
+[ZONE TRANSITION] t=116.00s vehicle=eastbound_flow.9 1 -> 2
+[ZONE TRANSITION] t=116.00s vehicle=westbound_flow.1 2 -> 1
+[ZONE TRANSITION] t=117.00s vehicle=eastbound_flow.8 1 -> 2
+[ZONE TRANSITION] t=118.00s vehicle=eastbound_flow.20 0 -> 1
+[ZONE TRANSITION] t=118.00s vehicle=westbound_flow.19 4 -> 3
+[ZONE TRANSITION] t=119.00s vehicle=westbound_flow.0 2 -> 1
+[ZONE TRANSITION] t=120.00s vehicle=eastbound_flow.2 2 -> 3
+[ZONE TRANSITION] t=120.00s vehicle=westbound_flow.20 4 -> 3
+[LSTM REFRESH] t=120.00s provider=eastbound_flow.25 zone=0 predicted_remaining=25.00s elapsed=34.00s
+[ZONE TRANSITION] t=121.00s vehicle=eastbound_flow.11 1 -> 2
+[ZONE TRANSITION] t=122.00s vehicle=eastbound_flow.21 0 -> 1
+[ZONE TRANSITION] t=122.00s vehicle=westbound_flow.21 4 -> 3
+[ZONE TRANSITION] t=124.00s vehicle=eastbound_flow.3 2 -> 3
+[ZONE TRANSITION] t=126.00s vehicle=eastbound_flow.22 0 -> 1
+[ZONE TRANSITION] t=126.00s vehicle=westbound_flow.22 4 -> 3
+[ZONE TRANSITION] t=129.00s vehicle=westbound_flow.11 3 -> 2
+[ZONE TRANSITION] t=130.00s vehicle=eastbound_flow.23 0 -> 1
+[LSTM REFRESH] t=130.00s provider=eastbound_flow.25 zone=0 predicted_remaining=14.67s elapsed=44.00s
+[ZONE TRANSITION] t=131.00s vehicle=eastbound_flow.14 1 -> 2
+[ZONE TRANSITION] t=131.00s vehicle=westbound_flow.13 3 -> 2
+[ZONE TRANSITION] t=132.00s vehicle=eastbound_flow.5 2 -> 3
+[ZONE TRANSITION] t=132.00s vehicle=westbound_flow.5 2 -> 1
+[ZONE TRANSITION] t=134.00s vehicle=eastbound_flow.13 1 -> 2
+[ZONE TRANSITION] t=134.00s vehicle=westbound_flow.12 3 -> 2
+[ZONE TRANSITION] t=134.00s vehicle=westbound_flow.23 4 -> 3
+[ZONE TRANSITION] t=135.00s vehicle=eastbound_flow.15 1 -> 2
+[ZONE TRANSITION] t=135.00s vehicle=eastbound_flow.4 2 -> 3
+[ZONE TRANSITION] t=135.00s vehicle=westbound_flow.15 3 -> 2
+[ZONE TRANSITION] t=136.00s vehicle=eastbound_flow.6 2 -> 3
+[ZONE TRANSITION] t=136.00s vehicle=westbound_flow.14 3 -> 2
+[ZONE TRANSITION] t=136.00s vehicle=westbound_flow.6 2 -> 1
+[ZONE TRANSITION] t=138.00s vehicle=westbound_flow.25 4 -> 3
+[ZONE TRANSITION] t=139.00s vehicle=eastbound_flow.12 1 -> 2
+[ZONE TRANSITION] t=139.00s vehicle=westbound_flow.16 3 -> 2
+[ZONE TRANSITION] t=139.00s vehicle=westbound_flow.3 2 -> 1
+[ZONE TRANSITION] t=140.00s vehicle=eastbound_flow.16 1 -> 2
+[ZONE TRANSITION] t=140.00s vehicle=eastbound_flow.24 0 -> 1
+
+[PREDICTIVE HANDOVER TRIGGER]
+  Time       : 140.00s
+  Provider   : eastbound_flow.25
+  Zone       : 0
+  LSTM prediction: 4.95s
+  Margin     : 5.00s
+
+[PRE-DEPARTURE HANDOVER]
+  Handover #     : 2
+  Source provider : eastbound_flow.25
+  Standby provider: eastbound_flow.32
+  Source zone     : 0
+  Standby zone    : 0
+  Standby CPU     : 12.00
+  LSTM residency  : 29.10s
+  Security        : VERIFIED
+  Resource        : CONTINUOUS
+[HANDOVER RESULT] SUCCESS
+[NEW PRIMARY] Provider=eastbound_flow.32 Prediction=29.10s
+[ZONE TRANSITION] t=141.00s vehicle=eastbound_flow.7 2 -> 3
+[ZONE TRANSITION] t=141.00s vehicle=westbound_flow.24 4 -> 3
+[ZONE TRANSITION] t=142.00s vehicle=eastbound_flow.26 0 -> 1
+[ZONE TRANSITION] t=142.00s vehicle=westbound_flow.26 4 -> 3
+[ZONE TRANSITION] t=143.00s vehicle=eastbound_flow.17 1 -> 2
+[ZONE TRANSITION] t=143.00s vehicle=westbound_flow.17 3 -> 2
+[ZONE TRANSITION] t=143.00s vehicle=westbound_flow.2 2 -> 1
+[ZONE TRANSITION] t=145.00s vehicle=eastbound_flow.25 0 -> 1
+[ZONE TRANSITION] t=146.00s vehicle=eastbound_flow.27 0 -> 1
+[ZONE TRANSITION] t=146.00s vehicle=westbound_flow.27 4 -> 3
+[ZONE TRANSITION] t=147.00s vehicle=westbound_flow.18 3 -> 2
+[ZONE TRANSITION] t=147.00s vehicle=westbound_flow.4 2 -> 1
+[ZONE TRANSITION] t=148.00s vehicle=westbound_flow.9 2 -> 1
+[ZONE TRANSITION] t=149.00s vehicle=eastbound_flow.0 3 -> 4
+[ZONE TRANSITION] t=149.00s vehicle=eastbound_flow.18 1 -> 2
+[ZONE TRANSITION] t=149.00s vehicle=westbound_flow.7 2 -> 1
+[ZONE TRANSITION] t=150.00s vehicle=westbound_flow.28 4 -> 3
+[LSTM REFRESH] t=150.00s provider=eastbound_flow.32 zone=0 predicted_remaining=18.60s elapsed=64.00s
+[ZONE TRANSITION] t=151.00s vehicle=eastbound_flow.19 1 -> 2
+[ZONE TRANSITION] t=151.00s vehicle=westbound_flow.8 2 -> 1
+[ZONE TRANSITION] t=152.00s vehicle=eastbound_flow.10 2 -> 3
+[ZONE TRANSITION] t=152.00s vehicle=westbound_flow.10 2 -> 1
+[ZONE TRANSITION] t=153.00s vehicle=eastbound_flow.1 3 -> 4
+[ZONE TRANSITION] t=153.00s vehicle=westbound_flow.1 1 -> 0
+[ZONE TRANSITION] t=154.00s vehicle=eastbound_flow.28 0 -> 1
+[ZONE TRANSITION] t=154.00s vehicle=eastbound_flow.29 0 -> 1
+[ZONE TRANSITION] t=155.00s vehicle=eastbound_flow.20 1 -> 2
+[ZONE TRANSITION] t=155.00s vehicle=westbound_flow.29 4 -> 3
+[ZONE TRANSITION] t=156.00s vehicle=eastbound_flow.9 2 -> 3
+[ZONE TRANSITION] t=157.00s vehicle=eastbound_flow.2 3 -> 4
+[ZONE TRANSITION] t=158.00s vehicle=eastbound_flow.30 0 -> 1
+[ZONE TRANSITION] t=158.00s vehicle=westbound_flow.20 3 -> 2
+[ZONE TRANSITION] t=158.00s vehicle=westbound_flow.30 4 -> 3
+[ZONE TRANSITION] t=159.00s vehicle=eastbound_flow.11 2 -> 3
+[ZONE TRANSITION] t=159.00s vehicle=eastbound_flow.21 1 -> 2
+[ZONE TRANSITION] t=159.00s vehicle=westbound_flow.0 1 -> 0
+[ZONE TRANSITION] t=159.00s vehicle=westbound_flow.19 3 -> 2
+[ZONE TRANSITION] t=159.00s vehicle=westbound_flow.21 3 -> 2
+[ZONE TRANSITION] t=160.00s vehicle=eastbound_flow.8 2 -> 3
+[LSTM REFRESH] t=160.00s provider=eastbound_flow.32 zone=0 predicted_remaining=8.55s elapsed=74.00s
+[ZONE TRANSITION] t=161.00s vehicle=eastbound_flow.3 3 -> 4
+[ZONE TRANSITION] t=162.00s vehicle=eastbound_flow.31 0 -> 1
+[ZONE TRANSITION] t=163.00s vehicle=eastbound_flow.22 1 -> 2
+[ZONE TRANSITION] t=163.00s vehicle=westbound_flow.22 3 -> 2
+[ZONE TRANSITION] t=163.00s vehicle=westbound_flow.31 4 -> 3
+
+[PREDICTIVE HANDOVER TRIGGER]
+  Time       : 164.00s
+  Provider   : eastbound_flow.32
+  Zone       : 0
+  LSTM prediction: 4.70s
+  Margin     : 5.00s
+
+[PRE-DEPARTURE HANDOVER]
+  Handover #     : 3
+  Source provider : eastbound_flow.32
+  Standby provider: eastbound_flow.38
+  Source zone     : 0
+  Standby zone    : 0
+  Standby CPU     : 12.00
+  LSTM residency  : 26.29s
+  Security        : VERIFIED
+  Resource        : CONTINUOUS
+[HANDOVER RESULT] SUCCESS
+[NEW PRIMARY] Provider=eastbound_flow.38 Prediction=26.29s
+[ZONE TRANSITION] t=167.00s vehicle=eastbound_flow.23 1 -> 2
+[ZONE TRANSITION] t=168.00s vehicle=eastbound_flow.14 2 -> 3
+[ZONE TRANSITION] t=169.00s vehicle=eastbound_flow.32 0 -> 1
+[ZONE TRANSITION] t=169.00s vehicle=eastbound_flow.5 3 -> 4
+[ZONE TRANSITION] t=169.00s vehicle=westbound_flow.5 1 -> 0
+[ZONE TRANSITION] t=170.00s vehicle=westbound_flow.11 2 -> 1
+[ZONE TRANSITION] t=170.00s vehicle=westbound_flow.13 2 -> 1
+[LSTM REFRESH] t=170.00s provider=eastbound_flow.38 zone=0 predicted_remaining=20.01s elapsed=84.00s
+[ZONE TRANSITION] t=171.00s vehicle=westbound_flow.32 4 -> 3
+[ZONE TRANSITION] t=172.00s vehicle=eastbound_flow.15 2 -> 3
+[ZONE TRANSITION] t=172.00s vehicle=westbound_flow.15 2 -> 1
+[ZONE TRANSITION] t=173.00s vehicle=eastbound_flow.6 3 -> 4
+[ZONE TRANSITION] t=173.00s vehicle=westbound_flow.6 1 -> 0
+[ZONE TRANSITION] t=174.00s vehicle=eastbound_flow.13 2 -> 3
+[ZONE TRANSITION] t=174.00s vehicle=eastbound_flow.33 0 -> 1
+[ZONE TRANSITION] t=174.00s vehicle=eastbound_flow.34 0 -> 1
+[ZONE TRANSITION] t=174.00s vehicle=westbound_flow.33 4 -> 3
+[ZONE TRANSITION] t=174.00s vehicle=westbound_flow.34 4 -> 3
+[ZONE TRANSITION] t=175.00s vehicle=eastbound_flow.4 3 -> 4
+[ZONE TRANSITION] t=175.00s vehicle=westbound_flow.23 3 -> 2
+[ZONE TRANSITION] t=175.00s vehicle=westbound_flow.25 3 -> 2
+[ZONE TRANSITION] t=176.00s vehicle=eastbound_flow.16 2 -> 3
+[ZONE TRANSITION] t=176.00s vehicle=westbound_flow.12 2 -> 1
+[ZONE TRANSITION] t=176.00s vehicle=westbound_flow.14 2 -> 1
+[ZONE TRANSITION] t=176.00s vehicle=westbound_flow.16 2 -> 1
+[ZONE TRANSITION] t=178.00s vehicle=eastbound_flow.35 0 -> 1
+[ZONE TRANSITION] t=178.00s vehicle=eastbound_flow.7 3 -> 4
+[ZONE TRANSITION] t=179.00s vehicle=eastbound_flow.26 1 -> 2
+[ZONE TRANSITION] t=179.00s vehicle=westbound_flow.26 3 -> 2
+[ZONE TRANSITION] t=179.00s vehicle=westbound_flow.35 4 -> 3
+[ZONE TRANSITION] t=180.00s vehicle=westbound_flow.17 2 -> 1
+[LSTM REFRESH] t=180.00s provider=eastbound_flow.38 zone=0 predicted_remaining=10.08s elapsed=94.00s
+[ZONE TRANSITION] t=181.00s vehicle=eastbound_flow.17 2 -> 3
+[ZONE TRANSITION] t=181.00s vehicle=westbound_flow.3 1 -> 0
+[ZONE TRANSITION] t=182.00s vehicle=eastbound_flow.24 1 -> 2
+[ZONE TRANSITION] t=182.00s vehicle=westbound_flow.36 4 -> 3
+[ZONE TRANSITION] t=183.00s vehicle=eastbound_flow.27 1 -> 2
+[ZONE TRANSITION] t=183.00s vehicle=westbound_flow.27 3 -> 2
+[ZONE TRANSITION] t=184.00s vehicle=eastbound_flow.12 2 -> 3
+[ZONE TRANSITION] t=184.00s vehicle=westbound_flow.18 2 -> 1
+[ZONE TRANSITION] t=184.00s vehicle=westbound_flow.24 3 -> 2
+[ZONE TRANSITION] t=185.00s vehicle=eastbound_flow.36 0 -> 1
+[ZONE TRANSITION] t=185.00s vehicle=westbound_flow.9 1 -> 0
+
+[PREDICTIVE HANDOVER TRIGGER]
+  Time       : 186.00s
+  Provider   : eastbound_flow.38
+  Zone       : 0
+  LSTM prediction: 4.09s
+  Margin     : 5.00s
+
+[PRE-DEPARTURE HANDOVER]
+  Handover #     : 4
+  Source provider : eastbound_flow.38
+  Standby provider: eastbound_flow.44
+  Source zone     : 0
+  Standby zone    : 0
+  Standby CPU     : 12.00
+  LSTM residency  : 27.55s
+  Security        : VERIFIED
+  Resource        : CONTINUOUS
+[HANDOVER RESULT] SUCCESS
+[NEW PRIMARY] Provider=eastbound_flow.44 Prediction=27.55s
+[ZONE TRANSITION] t=187.00s vehicle=eastbound_flow.18 2 -> 3
+[ZONE TRANSITION] t=187.00s vehicle=westbound_flow.28 3 -> 2
+[ZONE TRANSITION] t=187.00s vehicle=westbound_flow.37 4 -> 3
+[ZONE TRANSITION] t=188.00s vehicle=eastbound_flow.19 2 -> 3
+[ZONE TRANSITION] t=188.00s vehicle=eastbound_flow.25 1 -> 2
+[ZONE TRANSITION] t=188.00s vehicle=eastbound_flow.37 0 -> 1
+[ZONE TRANSITION] t=188.00s vehicle=westbound_flow.2 1 -> 0
+[ZONE TRANSITION] t=189.00s vehicle=eastbound_flow.10 3 -> 4
+[ZONE TRANSITION] t=189.00s vehicle=westbound_flow.10 1 -> 0
+[ZONE TRANSITION] t=189.00s vehicle=westbound_flow.7 1 -> 0
+[ZONE TRANSITION] t=190.00s vehicle=eastbound_flow.38 0 -> 1
+[ZONE TRANSITION] t=190.00s vehicle=westbound_flow.4 1 -> 0
+[LSTM REFRESH] t=190.00s provider=eastbound_flow.44 zone=0 predicted_remaining=23.68s elapsed=104.00s
+[ZONE TRANSITION] t=191.00s vehicle=eastbound_flow.29 1 -> 2
+[ZONE TRANSITION] t=191.00s vehicle=westbound_flow.38 4 -> 3
+[ZONE TRANSITION] t=191.00s vehicle=westbound_flow.8 1 -> 0
+[ZONE TRANSITION] t=192.00s vehicle=eastbound_flow.20 2 -> 3
+[ZONE TRANSITION] t=193.00s vehicle=westbound_flow.29 3 -> 2
+[ZONE TRANSITION] t=194.00s vehicle=eastbound_flow.39 0 -> 1
+[ZONE TRANSITION] t=194.00s vehicle=westbound_flow.39 4 -> 3
+[ZONE TRANSITION] t=195.00s vehicle=eastbound_flow.28 1 -> 2
+[ZONE TRANSITION] t=195.00s vehicle=eastbound_flow.30 1 -> 2
+[ZONE TRANSITION] t=195.00s vehicle=eastbound_flow.9 3 -> 4
+[ZONE TRANSITION] t=195.00s vehicle=westbound_flow.30 3 -> 2
+[ZONE TRANSITION] t=196.00s vehicle=eastbound_flow.21 2 -> 3
+[ZONE TRANSITION] t=196.00s vehicle=westbound_flow.21 2 -> 1
+[ZONE TRANSITION] t=197.00s vehicle=eastbound_flow.11 3 -> 4
+[ZONE TRANSITION] t=197.00s vehicle=westbound_flow.20 2 -> 1
+[ZONE TRANSITION] t=198.00s vehicle=eastbound_flow.40 0 -> 1
+[ZONE TRANSITION] t=198.00s vehicle=westbound_flow.40 4 -> 3
+[ZONE TRANSITION] t=199.00s vehicle=eastbound_flow.31 1 -> 2
+[ZONE TRANSITION] t=200.00s vehicle=eastbound_flow.22 2 -> 3
+[ZONE TRANSITION] t=200.00s vehicle=westbound_flow.19 2 -> 1
+[ZONE TRANSITION] t=200.00s vehicle=westbound_flow.22 2 -> 1
+[ZONE TRANSITION] t=200.00s vehicle=westbound_flow.31 3 -> 2
+[LSTM REFRESH] t=200.00s provider=eastbound_flow.44 zone=0 predicted_remaining=13.92s elapsed=114.00s
+[ZONE TRANSITION] t=202.00s vehicle=eastbound_flow.41 0 -> 1
+[ZONE TRANSITION] t=202.00s vehicle=eastbound_flow.8 3 -> 4
+[ZONE TRANSITION] t=204.00s vehicle=eastbound_flow.23 2 -> 3
+[ZONE TRANSITION] t=204.00s vehicle=westbound_flow.41 4 -> 3
+[ZONE TRANSITION] t=205.00s vehicle=eastbound_flow.14 3 -> 4
+[ZONE TRANSITION] t=206.00s vehicle=eastbound_flow.42 0 -> 1
+[ZONE TRANSITION] t=207.00s vehicle=westbound_flow.42 4 -> 3
+[ZONE TRANSITION] t=208.00s vehicle=eastbound_flow.32 1 -> 2
+[ZONE TRANSITION] t=209.00s vehicle=eastbound_flow.15 3 -> 4
+[ZONE TRANSITION] t=209.00s vehicle=westbound_flow.13 1 -> 0
+[ZONE TRANSITION] t=209.00s vehicle=westbound_flow.15 1 -> 0
+[ZONE TRANSITION] t=210.00s vehicle=eastbound_flow.43 0 -> 1
+[ZONE TRANSITION] t=210.00s vehicle=westbound_flow.43 4 -> 3
+
+[PREDICTIVE HANDOVER TRIGGER]
+  Time       : 210.00s
+  Provider   : eastbound_flow.44
+  Zone       : 0
+  LSTM prediction: 4.07s
+  Margin     : 5.00s
+
+[PRE-DEPARTURE HANDOVER]
+  Handover #     : 5
+  Source provider : eastbound_flow.44
+  Standby provider: eastbound_flow.50
+  Source zone     : 0
+  Standby zone    : 0
+  Standby CPU     : 12.00
+  LSTM residency  : 27.55s
+  Security        : VERIFIED
+  Resource        : CONTINUOUS
+[HANDOVER RESULT] SUCCESS
+[NEW PRIMARY] Provider=eastbound_flow.50 Prediction=27.55s
+[ZONE TRANSITION] t=211.00s vehicle=eastbound_flow.34 1 -> 2
+[ZONE TRANSITION] t=211.00s vehicle=westbound_flow.34 3 -> 2
+[ZONE TRANSITION] t=212.00s vehicle=westbound_flow.11 1 -> 0
+[ZONE TRANSITION] t=212.00s vehicle=westbound_flow.25 2 -> 1
+[ZONE TRANSITION] t=213.00s vehicle=westbound_flow.16 1 -> 0
+[ZONE TRANSITION] t=213.00s vehicle=westbound_flow.32 3 -> 2
+[ZONE TRANSITION] t=214.00s vehicle=eastbound_flow.13 3 -> 4
+[ZONE TRANSITION] t=214.00s vehicle=eastbound_flow.16 3 -> 4
+[ZONE TRANSITION] t=214.00s vehicle=eastbound_flow.44 0 -> 1
+[ZONE TRANSITION] t=214.00s vehicle=westbound_flow.33 3 -> 2
+[ZONE TRANSITION] t=214.00s vehicle=westbound_flow.44 4 -> 3
+[ZONE TRANSITION] t=215.00s vehicle=eastbound_flow.33 1 -> 2
+[ZONE TRANSITION] t=215.00s vehicle=eastbound_flow.35 1 -> 2
+[ZONE TRANSITION] t=216.00s vehicle=eastbound_flow.26 2 -> 3
+[ZONE TRANSITION] t=216.00s vehicle=westbound_flow.14 1 -> 0
+[ZONE TRANSITION] t=216.00s vehicle=westbound_flow.23 2 -> 1
+[ZONE TRANSITION] t=216.00s vehicle=westbound_flow.26 2 -> 1
+[ZONE TRANSITION] t=217.00s vehicle=westbound_flow.17 1 -> 0
+[ZONE TRANSITION] t=217.00s vehicle=westbound_flow.35 3 -> 2
+[ZONE TRANSITION] t=218.00s vehicle=eastbound_flow.17 3 -> 4
+[ZONE TRANSITION] t=218.00s vehicle=eastbound_flow.45 0 -> 1
+[ZONE TRANSITION] t=219.00s vehicle=westbound_flow.12 1 -> 0
+[ZONE TRANSITION] t=219.00s vehicle=westbound_flow.36 3 -> 2
+[ZONE TRANSITION] t=220.00s vehicle=eastbound_flow.27 2 -> 3
+[LSTM REFRESH] t=220.00s provider=eastbound_flow.50 zone=0 predicted_remaining=17.73s elapsed=134.00s
+[ZONE TRANSITION] t=221.00s vehicle=westbound_flow.18 1 -> 0
+[ZONE TRANSITION] t=221.00s vehicle=westbound_flow.27 2 -> 1
+[ZONE TRANSITION] t=223.00s vehicle=westbound_flow.45 4 -> 3
+[ZONE TRANSITION] t=224.00s vehicle=eastbound_flow.24 2 -> 3
+[ZONE TRANSITION] t=224.00s vehicle=eastbound_flow.36 1 -> 2
+[ZONE TRANSITION] t=224.00s vehicle=westbound_flow.28 2 -> 1
+[ZONE TRANSITION] t=224.00s vehicle=westbound_flow.37 3 -> 2
+[ZONE TRANSITION] t=225.00s vehicle=eastbound_flow.19 3 -> 4
+[ZONE TRANSITION] t=226.00s vehicle=eastbound_flow.37 1 -> 2
+[ZONE TRANSITION] t=226.00s vehicle=eastbound_flow.47 0 -> 1
+[ZONE TRANSITION] t=226.00s vehicle=westbound_flow.46 4 -> 3
+[ZONE TRANSITION] t=226.00s vehicle=westbound_flow.47 4 -> 3
+[ZONE TRANSITION] t=227.00s vehicle=eastbound_flow.18 3 -> 4
+[ZONE TRANSITION] t=227.00s vehicle=eastbound_flow.38 1 -> 2
+[ZONE TRANSITION] t=228.00s vehicle=eastbound_flow.29 2 -> 3
+[ZONE TRANSITION] t=228.00s vehicle=westbound_flow.24 2 -> 1
+[ZONE TRANSITION] t=228.00s vehicle=westbound_flow.38 3 -> 2
+[ZONE TRANSITION] t=229.00s vehicle=eastbound_flow.12 3 -> 4
+[ZONE TRANSITION] t=229.00s vehicle=eastbound_flow.20 3 -> 4
+[ZONE TRANSITION] t=229.00s vehicle=eastbound_flow.46 0 -> 1
+[ZONE TRANSITION] t=230.00s vehicle=eastbound_flow.48 0 -> 1
+[LSTM REFRESH] t=230.00s provider=eastbound_flow.50 zone=0 predicted_remaining=7.75s elapsed=144.00s
+[ZONE TRANSITION] t=231.00s vehicle=eastbound_flow.25 2 -> 3
+[ZONE TRANSITION] t=231.00s vehicle=eastbound_flow.39 1 -> 2
+[ZONE TRANSITION] t=231.00s vehicle=westbound_flow.29 2 -> 1
+[ZONE TRANSITION] t=231.00s vehicle=westbound_flow.39 3 -> 2
+[ZONE TRANSITION] t=232.00s vehicle=eastbound_flow.30 2 -> 3
+[ZONE TRANSITION] t=232.00s vehicle=westbound_flow.30 2 -> 1
+[ZONE TRANSITION] t=233.00s vehicle=eastbound_flow.21 3 -> 4
+[ZONE TRANSITION] t=233.00s vehicle=westbound_flow.21 1 -> 0
+
+[PREDICTIVE HANDOVER TRIGGER]
+  Time       : 233.00s
+  Provider   : eastbound_flow.50
+  Zone       : 0
+  LSTM prediction: 4.80s
+  Margin     : 5.00s
+
+[PRE-DEPARTURE HANDOVER]
+  Handover #     : 6
+  Source provider : eastbound_flow.50
+  Standby provider: eastbound_flow.55
+  Source zone     : 0
+  Standby zone    : 0
+  Standby CPU     : 8.00
+  LSTM residency  : 28.17s
+  Security        : VERIFIED
+  Resource        : CONTINUOUS
+[HANDOVER RESULT] SUCCESS
+[NEW PRIMARY] Provider=eastbound_flow.55 Prediction=28.17s
+[ZONE TRANSITION] t=234.00s vehicle=eastbound_flow.49 0 -> 1
+[ZONE TRANSITION] t=234.00s vehicle=westbound_flow.48 4 -> 3
+[ZONE TRANSITION] t=234.00s vehicle=westbound_flow.49 4 -> 3
+[ZONE TRANSITION] t=235.00s vehicle=eastbound_flow.40 1 -> 2
+[ZONE TRANSITION] t=235.00s vehicle=westbound_flow.40 3 -> 2
+[ZONE TRANSITION] t=236.00s vehicle=eastbound_flow.28 2 -> 3
+[ZONE TRANSITION] t=236.00s vehicle=eastbound_flow.31 2 -> 3
+[ZONE TRANSITION] t=236.00s vehicle=westbound_flow.20 1 -> 0
+[ZONE TRANSITION] t=237.00s vehicle=eastbound_flow.22 3 -> 4
+[ZONE TRANSITION] t=237.00s vehicle=westbound_flow.22 1 -> 0
+[ZONE TRANSITION] t=237.00s vehicle=westbound_flow.31 2 -> 1
+[ZONE TRANSITION] t=238.00s vehicle=eastbound_flow.50 0 -> 1
+[ZONE TRANSITION] t=239.00s vehicle=eastbound_flow.41 1 -> 2
+[ZONE TRANSITION] t=240.00s vehicle=westbound_flow.50 4 -> 3
+[LSTM REFRESH] t=240.00s provider=eastbound_flow.55 zone=0 predicted_remaining=21.14s elapsed=154.00s
+[ZONE TRANSITION] t=241.00s vehicle=eastbound_flow.23 3 -> 4
+[ZONE TRANSITION] t=241.00s vehicle=westbound_flow.19 1 -> 0
+[ZONE TRANSITION] t=242.00s vehicle=westbound_flow.41 3 -> 2
+[ZONE TRANSITION] t=243.00s vehicle=eastbound_flow.42 1 -> 2
+[ZONE TRANSITION] t=243.00s vehicle=eastbound_flow.51 0 -> 1
+[ZONE TRANSITION] t=244.00s vehicle=westbound_flow.51 4 -> 3
+[ZONE TRANSITION] t=245.00s vehicle=westbound_flow.42 3 -> 2
+[ZONE TRANSITION] t=246.00s vehicle=westbound_flow.52 4 -> 3
+[ZONE TRANSITION] t=247.00s vehicle=eastbound_flow.32 2 -> 3
+[ZONE TRANSITION] t=247.00s vehicle=eastbound_flow.43 1 -> 2
+[ZONE TRANSITION] t=247.00s vehicle=westbound_flow.43 3 -> 2
+[ZONE TRANSITION] t=248.00s vehicle=eastbound_flow.34 2 -> 3
+[ZONE TRANSITION] t=248.00s vehicle=westbound_flow.25 1 -> 0
+[ZONE TRANSITION] t=248.00s vehicle=westbound_flow.34 2 -> 1
+[ZONE TRANSITION] t=250.00s vehicle=eastbound_flow.53 0 -> 1
+[ZONE TRANSITION] t=250.00s vehicle=westbound_flow.53 4 -> 3
+[LSTM REFRESH] t=250.00s provider=eastbound_flow.55 zone=0 predicted_remaining=11.19s elapsed=164.00s
+[ZONE TRANSITION] t=251.00s vehicle=eastbound_flow.44 1 -> 2
+[ZONE TRANSITION] t=251.00s vehicle=eastbound_flow.52 0 -> 1
+[ZONE TRANSITION] t=251.00s vehicle=westbound_flow.44 3 -> 2
+[ZONE TRANSITION] t=252.00s vehicle=eastbound_flow.26 3 -> 4
+[ZONE TRANSITION] t=252.00s vehicle=eastbound_flow.35 2 -> 3
+[ZONE TRANSITION] t=253.00s vehicle=westbound_flow.26 1 -> 0
+[ZONE TRANSITION] t=254.00s vehicle=eastbound_flow.54 0 -> 1
+[ZONE TRANSITION] t=255.00s vehicle=eastbound_flow.45 1 -> 2
+[ZONE TRANSITION] t=255.00s vehicle=westbound_flow.32 2 -> 1
+[ZONE TRANSITION] t=255.00s vehicle=westbound_flow.33 2 -> 1
+[ZONE TRANSITION] t=255.00s vehicle=westbound_flow.35 2 -> 1
+[ZONE TRANSITION] t=256.00s vehicle=eastbound_flow.33 2 -> 3
+[ZONE TRANSITION] t=256.00s vehicle=westbound_flow.36 2 -> 1
+[ZONE TRANSITION] t=256.00s vehicle=westbound_flow.54 4 -> 3
+[ZONE TRANSITION] t=257.00s vehicle=eastbound_flow.27 3 -> 4
+[ZONE TRANSITION] t=257.00s vehicle=westbound_flow.23 1 -> 0
+
+[PREDICTIVE HANDOVER TRIGGER]
+  Time       : 257.00s
+  Provider   : eastbound_flow.55
+  Zone       : 0
+  LSTM prediction: 4.23s
+  Margin     : 5.00s
+
+[PRE-DEPARTURE HANDOVER]
+  Handover #     : 7
+  Source provider : eastbound_flow.55
+  Standby provider: eastbound_flow.61
+  Source zone     : 0
+  Standby zone    : 0
+  Standby CPU     : 8.00
+  LSTM residency  : 25.30s
+  Security        : VERIFIED
+  Resource        : CONTINUOUS
+[HANDOVER RESULT] SUCCESS
+[NEW PRIMARY] Provider=eastbound_flow.61 Prediction=25.30s
+[ZONE TRANSITION] t=258.00s vehicle=westbound_flow.27 1 -> 0
+[LSTM REFRESH] t=260.00s provider=eastbound_flow.61 zone=0 predicted_remaining=22.17s elapsed=174.00s
+[ZONE TRANSITION] t=261.00s vehicle=eastbound_flow.55 0 -> 1
+[ZONE TRANSITION] t=261.00s vehicle=westbound_flow.28 1 -> 0
+[ZONE TRANSITION] t=262.00s vehicle=eastbound_flow.56 0 -> 1
+[ZONE TRANSITION] t=262.00s vehicle=westbound_flow.37 2 -> 1
+[ZONE TRANSITION] t=262.00s vehicle=westbound_flow.56 4 -> 3
+[ZONE TRANSITION] t=263.00s vehicle=eastbound_flow.36 2 -> 3
+[ZONE TRANSITION] t=263.00s vehicle=eastbound_flow.47 1 -> 2
+[ZONE TRANSITION] t=263.00s vehicle=westbound_flow.47 3 -> 2
+[ZONE TRANSITION] t=264.00s vehicle=eastbound_flow.38 2 -> 3
+[ZONE TRANSITION] t=264.00s vehicle=westbound_flow.45 3 -> 2
+[ZONE TRANSITION] t=264.00s vehicle=westbound_flow.55 4 -> 3
+[ZONE TRANSITION] t=265.00s vehicle=eastbound_flow.29 3 -> 4
+[ZONE TRANSITION] t=265.00s vehicle=eastbound_flow.37 2 -> 3
+[ZONE TRANSITION] t=266.00s vehicle=eastbound_flow.24 3 -> 4
+[ZONE TRANSITION] t=266.00s vehicle=eastbound_flow.57 0 -> 1
+[ZONE TRANSITION] t=266.00s vehicle=westbound_flow.38 2 -> 1
+[ZONE TRANSITION] t=266.00s vehicle=westbound_flow.46 3 -> 2
+[ZONE TRANSITION] t=267.00s vehicle=eastbound_flow.48 1 -> 2
+[ZONE TRANSITION] t=268.00s vehicle=eastbound_flow.30 3 -> 4
+[ZONE TRANSITION] t=268.00s vehicle=eastbound_flow.39 2 -> 3
+[ZONE TRANSITION] t=268.00s vehicle=westbound_flow.39 2 -> 1
+[ZONE TRANSITION] t=269.00s vehicle=westbound_flow.30 1 -> 0
+[ZONE TRANSITION] t=269.00s vehicle=westbound_flow.57 4 -> 3
+[ZONE TRANSITION] t=270.00s vehicle=eastbound_flow.58 0 -> 1
+[LSTM REFRESH] t=270.00s provider=eastbound_flow.61 zone=0 predicted_remaining=12.07s elapsed=184.00s
+[ZONE TRANSITION] t=271.00s vehicle=eastbound_flow.49 1 -> 2
+[ZONE TRANSITION] t=271.00s vehicle=westbound_flow.24 1 -> 0
+[ZONE TRANSITION] t=271.00s vehicle=westbound_flow.29 1 -> 0
+[ZONE TRANSITION] t=271.00s vehicle=westbound_flow.49 3 -> 2
+[ZONE TRANSITION] t=271.00s vehicle=westbound_flow.58 4 -> 3
+[ZONE TRANSITION] t=272.00s vehicle=eastbound_flow.40 2 -> 3
+[ZONE TRANSITION] t=272.00s vehicle=westbound_flow.40 2 -> 1
+[ZONE TRANSITION] t=273.00s vehicle=eastbound_flow.31 3 -> 4
+[ZONE TRANSITION] t=274.00s vehicle=eastbound_flow.25 3 -> 4
+[ZONE TRANSITION] t=274.00s vehicle=eastbound_flow.46 1 -> 2
+[ZONE TRANSITION] t=274.00s vehicle=westbound_flow.59 4 -> 3
+[ZONE TRANSITION] t=275.00s vehicle=eastbound_flow.50 1 -> 2
+[ZONE TRANSITION] t=275.00s vehicle=eastbound_flow.59 0 -> 1
+[ZONE TRANSITION] t=275.00s vehicle=westbound_flow.31 1 -> 0
+[ZONE TRANSITION] t=275.00s vehicle=westbound_flow.48 3 -> 2
+[ZONE TRANSITION] t=276.00s vehicle=eastbound_flow.41 2 -> 3
+[ZONE TRANSITION] t=277.00s vehicle=eastbound_flow.28 3 -> 4
+[ZONE TRANSITION] t=278.00s vehicle=westbound_flow.60 4 -> 3
+
+[PREDICTIVE HANDOVER TRIGGER]
+  Time       : 278.00s
+  Provider   : eastbound_flow.61
+  Zone       : 0
+  LSTM prediction: 4.17s
+  Margin     : 5.00s
+
+[PRE-DEPARTURE HANDOVER]
+  Handover #     : 8
+  Source provider : eastbound_flow.61
+  Standby provider: eastbound_flow.67
+  Source zone     : 0
+  Standby zone    : 0
+  Standby CPU     : 8.00
+  LSTM residency  : 28.00s
+  Security        : VERIFIED
+  Resource        : CONTINUOUS
+[HANDOVER RESULT] SUCCESS
+[NEW PRIMARY] Provider=eastbound_flow.67 Prediction=28.00s
+[ZONE TRANSITION] t=279.00s vehicle=westbound_flow.50 3 -> 2
+[ZONE TRANSITION] t=280.00s vehicle=eastbound_flow.42 2 -> 3
+[ZONE TRANSITION] t=280.00s vehicle=eastbound_flow.60 0 -> 1
+[ZONE TRANSITION] t=280.00s vehicle=westbound_flow.41 2 -> 1
+[LSTM REFRESH] t=280.00s provider=eastbound_flow.67 zone=0 predicted_remaining=26.20s elapsed=194.00s
+[ZONE TRANSITION] t=282.00s vehicle=eastbound_flow.51 1 -> 2
+[ZONE TRANSITION] t=282.00s vehicle=eastbound_flow.61 0 -> 1
+[ZONE TRANSITION] t=282.00s vehicle=westbound_flow.61 4 -> 3
+[ZONE TRANSITION] t=283.00s vehicle=westbound_flow.42 2 -> 1
+[ZONE TRANSITION] t=283.00s vehicle=westbound_flow.51 3 -> 2
+[ZONE TRANSITION] t=283.00s vehicle=westbound_flow.52 3 -> 2
+[ZONE TRANSITION] t=284.00s vehicle=eastbound_flow.43 2 -> 3
+[ZONE TRANSITION] t=284.00s vehicle=westbound_flow.43 2 -> 1
+[ZONE TRANSITION] t=285.00s vehicle=eastbound_flow.34 3 -> 4
+[ZONE TRANSITION] t=285.00s vehicle=westbound_flow.34 1 -> 0
+[ZONE TRANSITION] t=286.00s vehicle=eastbound_flow.62 0 -> 1
+[ZONE TRANSITION] t=286.00s vehicle=westbound_flow.62 4 -> 3
+[ZONE TRANSITION] t=287.00s vehicle=eastbound_flow.32 3 -> 4
+[ZONE TRANSITION] t=287.00s vehicle=eastbound_flow.53 1 -> 2
+[ZONE TRANSITION] t=287.00s vehicle=westbound_flow.53 3 -> 2
+[ZONE TRANSITION] t=288.00s vehicle=eastbound_flow.44 2 -> 3
+[ZONE TRANSITION] t=288.00s vehicle=westbound_flow.44 2 -> 1
+[ZONE TRANSITION] t=289.00s vehicle=eastbound_flow.35 3 -> 4
+[ZONE TRANSITION] t=290.00s vehicle=eastbound_flow.63 0 -> 1
+[LSTM REFRESH] t=290.00s provider=eastbound_flow.67 zone=0 predicted_remaining=16.00s elapsed=204.00s
+[ZONE TRANSITION] t=291.00s vehicle=eastbound_flow.54 1 -> 2
+[ZONE TRANSITION] t=292.00s vehicle=eastbound_flow.45 2 -> 3
+[ZONE TRANSITION] t=292.00s vehicle=eastbound_flow.52 1 -> 2
+[ZONE TRANSITION] t=293.00s vehicle=westbound_flow.35 1 -> 0
+[ZONE TRANSITION] t=294.00s vehicle=eastbound_flow.64 0 -> 1
+[ZONE TRANSITION] t=294.00s vehicle=westbound_flow.36 1 -> 0
+[ZONE TRANSITION] t=294.00s vehicle=westbound_flow.54 3 -> 2
+[ZONE TRANSITION] t=294.00s vehicle=westbound_flow.64 4 -> 3
+[ZONE TRANSITION] t=295.00s vehicle=westbound_flow.33 1 -> 0
+[ZONE TRANSITION] t=296.00s vehicle=eastbound_flow.33 3 -> 4
+[ZONE TRANSITION] t=297.00s vehicle=westbound_flow.32 1 -> 0
+[ZONE TRANSITION] t=298.00s vehicle=eastbound_flow.65 0 -> 1
+[ZONE TRANSITION] t=298.00s vehicle=westbound_flow.63 4 -> 3
+[ZONE TRANSITION] t=298.00s vehicle=westbound_flow.65 4 -> 3
+[ZONE TRANSITION] t=299.00s vehicle=eastbound_flow.56 1 -> 2
+[ZONE TRANSITION] t=299.00s vehicle=westbound_flow.37 1 -> 0
+[ZONE TRANSITION] t=299.00s vehicle=westbound_flow.56 3 -> 2
+[ZONE TRANSITION] t=300.00s vehicle=eastbound_flow.47 2 -> 3
+[ZONE TRANSITION] t=300.00s vehicle=westbound_flow.47 2 -> 1
+[LSTM REFRESH] t=300.00s provider=eastbound_flow.67 zone=0 predicted_remaining=6.02s elapsed=214.00s
+[ZONE TRANSITION] t=301.00s vehicle=eastbound_flow.38 3 -> 4
+[ZONE TRANSITION] t=301.00s vehicle=eastbound_flow.55 1 -> 2
+[ZONE TRANSITION] t=302.00s vehicle=eastbound_flow.36 3 -> 4
+[ZONE TRANSITION] t=302.00s vehicle=westbound_flow.66 4 -> 3
+
+[PREDICTIVE HANDOVER TRIGGER]
+  Time       : 302.00s
+  Provider   : eastbound_flow.67
+  Zone       : 0
+  LSTM prediction: 4.17s
+  Margin     : 5.00s
+
+[PRE-DEPARTURE HANDOVER]
+  Handover #     : 9
+  Source provider : eastbound_flow.67
+  Standby provider: eastbound_flow.72
+  Source zone     : 0
+  Standby zone    : 0
+  Standby CPU     : 4.00
+  LSTM residency  : 36.48s
+  Security        : VERIFIED
+  Resource        : CONTINUOUS
+[HANDOVER RESULT] SUCCESS
+[NEW PRIMARY] Provider=eastbound_flow.72 Prediction=36.48s
+[ZONE TRANSITION] t=303.00s vehicle=eastbound_flow.57 1 -> 2
+[ZONE TRANSITION] t=303.00s vehicle=westbound_flow.38 1 -> 0
+[ZONE TRANSITION] t=304.00s vehicle=eastbound_flow.37 3 -> 4
+[ZONE TRANSITION] t=304.00s vehicle=eastbound_flow.48 2 -> 3
+[ZONE TRANSITION] t=304.00s vehicle=eastbound_flow.66 0 -> 1
+[ZONE TRANSITION] t=305.00s vehicle=eastbound_flow.39 3 -> 4
+[ZONE TRANSITION] t=305.00s vehicle=westbound_flow.39 1 -> 0
+[ZONE TRANSITION] t=306.00s vehicle=eastbound_flow.67 0 -> 1
+[ZONE TRANSITION] t=306.00s vehicle=westbound_flow.45 2 -> 1
+[ZONE TRANSITION] t=306.00s vehicle=westbound_flow.46 2 -> 1
+[ZONE TRANSITION] t=306.00s vehicle=westbound_flow.67 4 -> 3
+[ZONE TRANSITION] t=307.00s vehicle=eastbound_flow.58 1 -> 2
+[ZONE TRANSITION] t=307.00s vehicle=westbound_flow.55 3 -> 2
+[ZONE TRANSITION] t=307.00s vehicle=westbound_flow.58 3 -> 2
+[ZONE TRANSITION] t=308.00s vehicle=eastbound_flow.49 2 -> 3
+[ZONE TRANSITION] t=308.00s vehicle=westbound_flow.49 2 -> 1
+[ZONE TRANSITION] t=309.00s vehicle=eastbound_flow.40 3 -> 4
+[ZONE TRANSITION] t=309.00s vehicle=westbound_flow.40 1 -> 0
+[ZONE TRANSITION] t=309.00s vehicle=westbound_flow.57 3 -> 2
+[ZONE TRANSITION] t=310.00s vehicle=eastbound_flow.68 0 -> 1
+[ZONE TRANSITION] t=310.00s vehicle=westbound_flow.68 4 -> 3
+[LSTM REFRESH] t=310.00s provider=eastbound_flow.72 zone=0 predicted_remaining=29.97s elapsed=224.00s
+[ZONE TRANSITION] t=311.00s vehicle=westbound_flow.59 3 -> 2
+[ZONE TRANSITION] t=312.00s vehicle=eastbound_flow.50 2 -> 3
+[ZONE TRANSITION] t=312.00s vehicle=eastbound_flow.59 1 -> 2
+[ZONE TRANSITION] t=313.00s vehicle=eastbound_flow.41 3 -> 4
+[ZONE TRANSITION] t=314.00s vehicle=eastbound_flow.69 0 -> 1
+[ZONE TRANSITION] t=315.00s vehicle=westbound_flow.60 3 -> 2
+[ZONE TRANSITION] t=316.00s vehicle=westbound_flow.48 2 -> 1
+[ZONE TRANSITION] t=316.00s vehicle=westbound_flow.69 4 -> 3
+[ZONE TRANSITION] t=317.00s vehicle=eastbound_flow.42 3 -> 4
+[ZONE TRANSITION] t=317.00s vehicle=westbound_flow.50 2 -> 1
+[ZONE TRANSITION] t=318.00s vehicle=eastbound_flow.46 2 -> 3
+[ZONE TRANSITION] t=318.00s vehicle=eastbound_flow.70 0 -> 1
+[ZONE TRANSITION] t=318.00s vehicle=westbound_flow.41 1 -> 0
+[ZONE TRANSITION] t=318.00s vehicle=westbound_flow.70 4 -> 3
+[ZONE TRANSITION] t=319.00s vehicle=eastbound_flow.61 1 -> 2
+[ZONE TRANSITION] t=319.00s vehicle=westbound_flow.61 3 -> 2
+[ZONE TRANSITION] t=320.00s vehicle=eastbound_flow.51 2 -> 3
+[ZONE TRANSITION] t=320.00s vehicle=eastbound_flow.60 1 -> 2
+[ZONE TRANSITION] t=320.00s vehicle=westbound_flow.52 2 -> 1
+[LSTM REFRESH] t=320.00s provider=eastbound_flow.72 zone=0 predicted_remaining=20.07s elapsed=234.00s
+[ZONE TRANSITION] t=321.00s vehicle=eastbound_flow.43 3 -> 4
+[ZONE TRANSITION] t=321.00s vehicle=westbound_flow.42 1 -> 0
+[ZONE TRANSITION] t=321.00s vehicle=westbound_flow.43 1 -> 0
+[ZONE TRANSITION] t=322.00s vehicle=westbound_flow.51 2 -> 1
+[ZONE TRANSITION] t=322.00s vehicle=westbound_flow.71 4 -> 3
+[ZONE TRANSITION] t=323.00s vehicle=eastbound_flow.62 1 -> 2
+[ZONE TRANSITION] t=323.00s vehicle=westbound_flow.62 3 -> 2
+[ZONE TRANSITION] t=324.00s vehicle=eastbound_flow.53 2 -> 3
+[ZONE TRANSITION] t=324.00s vehicle=westbound_flow.53 2 -> 1
+[ZONE TRANSITION] t=325.00s vehicle=eastbound_flow.44 3 -> 4
+[ZONE TRANSITION] t=325.00s vehicle=eastbound_flow.71 0 -> 1
+[ZONE TRANSITION] t=325.00s vehicle=westbound_flow.44 1 -> 0
+[ZONE TRANSITION] t=326.00s vehicle=westbound_flow.72 4 -> 3
+[ZONE TRANSITION] t=327.00s vehicle=eastbound_flow.63 1 -> 2
+[ZONE TRANSITION] t=328.00s vehicle=eastbound_flow.54 2 -> 3
+[ZONE TRANSITION] t=329.00s vehicle=eastbound_flow.45 3 -> 4
+[ZONE TRANSITION] t=330.00s vehicle=westbound_flow.73 4 -> 3
+[LSTM REFRESH] t=330.00s provider=eastbound_flow.72 zone=0 predicted_remaining=9.93s elapsed=244.00s
+[ZONE TRANSITION] t=331.00s vehicle=eastbound_flow.64 1 -> 2
+[ZONE TRANSITION] t=331.00s vehicle=westbound_flow.64 3 -> 2
+[ZONE TRANSITION] t=333.00s vehicle=eastbound_flow.52 2 -> 3
+[ZONE TRANSITION] t=333.00s vehicle=westbound_flow.54 2 -> 1
+[ZONE TRANSITION] t=334.00s vehicle=westbound_flow.74 4 -> 3
+[ZONE TRANSITION] t=335.00s vehicle=eastbound_flow.65 1 -> 2
+[ZONE TRANSITION] t=335.00s vehicle=eastbound_flow.73 0 -> 1
+[ZONE TRANSITION] t=335.00s vehicle=westbound_flow.65 3 -> 2
+[ZONE TRANSITION] t=336.00s vehicle=eastbound_flow.56 2 -> 3
+[ZONE TRANSITION] t=336.00s vehicle=eastbound_flow.74 0 -> 1
+[ZONE TRANSITION] t=336.00s vehicle=westbound_flow.56 2 -> 1
+
+[PREDICTIVE HANDOVER TRIGGER]
+  Time       : 336.00s
+  Provider   : eastbound_flow.72
+  Zone       : 0
+  LSTM prediction: 4.31s
+  Margin     : 5.00s
+
+[PRE-DEPARTURE HANDOVER]
+  Handover #     : 10
+  Source provider : eastbound_flow.72
+  Standby provider: eastbound_flow.80
+  Source zone     : 0
+  Standby zone    : 0
+  Standby CPU     : 12.00
+  LSTM residency  : 27.53s
+  Security        : VERIFIED
+  Resource        : CONTINUOUS
+[HANDOVER RESULT] SUCCESS
+[NEW PRIMARY] Provider=eastbound_flow.80 Prediction=27.53s
+[ZONE TRANSITION] t=337.00s vehicle=eastbound_flow.47 3 -> 4
+[ZONE TRANSITION] t=337.00s vehicle=westbound_flow.47 1 -> 0
+[ZONE TRANSITION] t=338.00s vehicle=westbound_flow.75 4 -> 3
+[ZONE TRANSITION] t=339.00s vehicle=westbound_flow.66 3 -> 2
+[ZONE TRANSITION] t=340.00s vehicle=eastbound_flow.57 2 -> 3
+[ZONE TRANSITION] t=340.00s vehicle=eastbound_flow.72 0 -> 1
+[ZONE TRANSITION] t=340.00s vehicle=eastbound_flow.75 0 -> 1
+[LSTM REFRESH] t=340.00s provider=eastbound_flow.80 zone=0 predicted_remaining=23.48s elapsed=254.00s
+[ZONE TRANSITION] t=341.00s vehicle=eastbound_flow.48 3 -> 4
+[ZONE TRANSITION] t=341.00s vehicle=eastbound_flow.55 2 -> 3
+[ZONE TRANSITION] t=342.00s vehicle=eastbound_flow.66 1 -> 2
+[ZONE TRANSITION] t=342.00s vehicle=eastbound_flow.76 0 -> 1
+[ZONE TRANSITION] t=343.00s vehicle=eastbound_flow.67 1 -> 2
+[ZONE TRANSITION] t=343.00s vehicle=westbound_flow.67 3 -> 2
+[ZONE TRANSITION] t=344.00s vehicle=eastbound_flow.58 2 -> 3
+[ZONE TRANSITION] t=344.00s vehicle=westbound_flow.58 2 -> 1
+[ZONE TRANSITION] t=344.00s vehicle=westbound_flow.63 3 -> 2
+[ZONE TRANSITION] t=345.00s vehicle=eastbound_flow.49 3 -> 4
+[ZONE TRANSITION] t=345.00s vehicle=westbound_flow.49 1 -> 0
+[ZONE TRANSITION] t=345.00s vehicle=westbound_flow.76 4 -> 3
+[ZONE TRANSITION] t=346.00s vehicle=eastbound_flow.77 0 -> 1
+[ZONE TRANSITION] t=346.00s vehicle=westbound_flow.46 1 -> 0
+[ZONE TRANSITION] t=346.00s vehicle=westbound_flow.77 4 -> 3
+[ZONE TRANSITION] t=347.00s vehicle=eastbound_flow.68 1 -> 2
+[ZONE TRANSITION] t=347.00s vehicle=westbound_flow.45 1 -> 0
+[ZONE TRANSITION] t=347.00s vehicle=westbound_flow.68 3 -> 2
+[ZONE TRANSITION] t=348.00s vehicle=westbound_flow.59 2 -> 1
+[ZONE TRANSITION] t=349.00s vehicle=eastbound_flow.50 3 -> 4
+[ZONE TRANSITION] t=349.00s vehicle=eastbound_flow.59 2 -> 3
+[ZONE TRANSITION] t=349.00s vehicle=westbound_flow.55 2 -> 1
+[ZONE TRANSITION] t=350.00s vehicle=eastbound_flow.78 0 -> 1
+[ZONE TRANSITION] t=350.00s vehicle=westbound_flow.57 2 -> 1
+[ZONE TRANSITION] t=350.00s vehicle=westbound_flow.78 4 -> 3
+[LSTM REFRESH] t=350.00s provider=eastbound_flow.80 zone=0 predicted_remaining=13.44s elapsed=264.00s
+[ZONE TRANSITION] t=351.00s vehicle=eastbound_flow.69 1 -> 2
+[ZONE TRANSITION] t=352.00s vehicle=westbound_flow.60 2 -> 1
+[ZONE TRANSITION] t=354.00s vehicle=westbound_flow.79 4 -> 3
+[ZONE TRANSITION] t=355.00s vehicle=eastbound_flow.70 1 -> 2
+[ZONE TRANSITION] t=355.00s vehicle=westbound_flow.69 3 -> 2
+[ZONE TRANSITION] t=355.00s vehicle=westbound_flow.70 3 -> 2
+[ZONE TRANSITION] t=356.00s vehicle=eastbound_flow.61 2 -> 3
+[ZONE TRANSITION] t=356.00s vehicle=westbound_flow.50 1 -> 0
+[ZONE TRANSITION] t=356.00s vehicle=westbound_flow.61 2 -> 1
+[ZONE TRANSITION] t=357.00s vehicle=westbound_flow.48 1 -> 0
+[ZONE TRANSITION] t=357.00s vehicle=westbound_flow.52 1 -> 0
+[ZONE TRANSITION] t=358.00s vehicle=eastbound_flow.51 3 -> 4
+[ZONE TRANSITION] t=358.00s vehicle=eastbound_flow.79 0 -> 1
+[ZONE TRANSITION] t=358.00s vehicle=westbound_flow.80 4 -> 3
+[ZONE TRANSITION] t=359.00s vehicle=eastbound_flow.60 2 -> 3
+[ZONE TRANSITION] t=359.00s vehicle=westbound_flow.71 3 -> 2
+
+[PREDICTIVE HANDOVER TRIGGER]
+  Time       : 359.00s
+  Provider   : eastbound_flow.80
+  Zone       : 0
+  LSTM prediction: 4.51s
+  Margin     : 5.00s
+
+[PRE-DEPARTURE HANDOVER]
+  Handover #     : 11
+  Source provider : eastbound_flow.80
+  Standby provider: eastbound_flow.87
+  Source zone     : 0
+  Standby zone    : 0
+  Standby CPU     : 4.00
+  LSTM residency  : 28.54s
+  Security        : VERIFIED
+  Resource        : CONTINUOUS
+[HANDOVER RESULT] SUCCESS
+[NEW PRIMARY] Provider=eastbound_flow.87 Prediction=28.54s
+[ZONE TRANSITION] t=360.00s vehicle=eastbound_flow.62 2 -> 3
+[ZONE TRANSITION] t=360.00s vehicle=westbound_flow.62 2 -> 1
+[LSTM REFRESH] t=360.00s provider=eastbound_flow.87 zone=0 predicted_remaining=27.72s elapsed=274.00s
+[ZONE TRANSITION] t=361.00s vehicle=eastbound_flow.53 3 -> 4
+[ZONE TRANSITION] t=361.00s vehicle=westbound_flow.51 1 -> 0
+[ZONE TRANSITION] t=361.00s vehicle=westbound_flow.53 1 -> 0
+[ZONE TRANSITION] t=362.00s vehicle=eastbound_flow.81 0 -> 1
+[ZONE TRANSITION] t=362.00s vehicle=westbound_flow.81 4 -> 3
+[ZONE TRANSITION] t=363.00s vehicle=eastbound_flow.46 3 -> 4
+[ZONE TRANSITION] t=363.00s vehicle=eastbound_flow.80 0 -> 1
+[ZONE TRANSITION] t=363.00s vehicle=westbound_flow.72 3 -> 2
+[ZONE TRANSITION] t=364.00s vehicle=eastbound_flow.63 2 -> 3
+[ZONE TRANSITION] t=364.00s vehicle=eastbound_flow.71 1 -> 2
+[ZONE TRANSITION] t=365.00s vehicle=eastbound_flow.54 3 -> 4
+[ZONE TRANSITION] t=366.00s vehicle=eastbound_flow.82 0 -> 1
+[ZONE TRANSITION] t=367.00s vehicle=westbound_flow.73 3 -> 2
+[ZONE TRANSITION] t=368.00s vehicle=eastbound_flow.64 2 -> 3
+[ZONE TRANSITION] t=368.00s vehicle=westbound_flow.64 2 -> 1
+[ZONE TRANSITION] t=370.00s vehicle=eastbound_flow.83 0 -> 1
+[ZONE TRANSITION] t=370.00s vehicle=westbound_flow.82 4 -> 3
+[ZONE TRANSITION] t=370.00s vehicle=westbound_flow.83 4 -> 3
+[LSTM REFRESH] t=370.00s provider=eastbound_flow.87 zone=0 predicted_remaining=17.53s elapsed=284.00s
+[ZONE TRANSITION] t=371.00s vehicle=westbound_flow.54 1 -> 0
+[ZONE TRANSITION] t=371.00s vehicle=westbound_flow.74 3 -> 2
+[ZONE TRANSITION] t=372.00s vehicle=eastbound_flow.65 2 -> 3
+[ZONE TRANSITION] t=372.00s vehicle=westbound_flow.65 2 -> 1
+[ZONE TRANSITION] t=373.00s vehicle=eastbound_flow.56 3 -> 4
+[ZONE TRANSITION] t=373.00s vehicle=westbound_flow.56 1 -> 0
+[ZONE TRANSITION] t=374.00s vehicle=eastbound_flow.74 1 -> 2
+[ZONE TRANSITION] t=375.00s vehicle=eastbound_flow.52 3 -> 4
+[ZONE TRANSITION] t=375.00s vehicle=eastbound_flow.84 0 -> 1
+[ZONE TRANSITION] t=375.00s vehicle=westbound_flow.75 3 -> 2
+[ZONE TRANSITION] t=376.00s vehicle=westbound_flow.66 2 -> 1
+[ZONE TRANSITION] t=376.00s vehicle=westbound_flow.84 4 -> 3
+[ZONE TRANSITION] t=377.00s vehicle=eastbound_flow.57 3 -> 4
+[ZONE TRANSITION] t=377.00s vehicle=eastbound_flow.73 1 -> 2
+[ZONE TRANSITION] t=378.00s vehicle=eastbound_flow.75 1 -> 2
+[ZONE TRANSITION] t=378.00s vehicle=eastbound_flow.85 0 -> 1
+[ZONE TRANSITION] t=379.00s vehicle=eastbound_flow.76 1 -> 2
+[ZONE TRANSITION] t=380.00s vehicle=eastbound_flow.55 3 -> 4
+[ZONE TRANSITION] t=380.00s vehicle=eastbound_flow.67 2 -> 3
+[ZONE TRANSITION] t=380.00s vehicle=westbound_flow.67 2 -> 1
+[LSTM REFRESH] t=380.00s provider=eastbound_flow.87 zone=0 predicted_remaining=7.93s elapsed=294.00s
+[ZONE TRANSITION] t=381.00s vehicle=eastbound_flow.58 3 -> 4
+[ZONE TRANSITION] t=381.00s vehicle=eastbound_flow.66 2 -> 3
+[ZONE TRANSITION] t=381.00s vehicle=westbound_flow.58 1 -> 0
+[ZONE TRANSITION] t=382.00s vehicle=westbound_flow.86 4 -> 3
+[ZONE TRANSITION] t=383.00s vehicle=eastbound_flow.77 1 -> 2
+[ZONE TRANSITION] t=383.00s vehicle=westbound_flow.77 3 -> 2
+[ZONE TRANSITION] t=383.00s vehicle=westbound_flow.85 4 -> 3
+[ZONE TRANSITION] t=384.00s vehicle=eastbound_flow.68 2 -> 3
+[ZONE TRANSITION] t=384.00s vehicle=westbound_flow.68 2 -> 1
+
+[PREDICTIVE HANDOVER TRIGGER]
+  Time       : 384.00s
+  Provider   : eastbound_flow.87
+  Zone       : 0
+  LSTM prediction: 4.14s
+  Margin     : 5.00s
+
+[PRE-DEPARTURE HANDOVER]
+  Handover #     : 12
+  Source provider : eastbound_flow.87
+  Standby provider: eastbound_flow.93
+  Source zone     : 0
+  Standby zone    : 0
+  Standby CPU     : 4.00
+  LSTM residency  : 25.98s
+  Security        : VERIFIED
+  Resource        : CONTINUOUS
+[HANDOVER RESULT] SUCCESS
+[NEW PRIMARY] Provider=eastbound_flow.93 Prediction=25.98s
+[ZONE TRANSITION] t=385.00s vehicle=westbound_flow.59 1 -> 0
+[ZONE TRANSITION] t=385.00s vehicle=westbound_flow.76 3 -> 2
+[ZONE TRANSITION] t=386.00s vehicle=eastbound_flow.59 3 -> 4
+[ZONE TRANSITION] t=387.00s vehicle=eastbound_flow.78 1 -> 2
+[ZONE TRANSITION] t=387.00s vehicle=eastbound_flow.86 0 -> 1
+[ZONE TRANSITION] t=387.00s vehicle=westbound_flow.78 3 -> 2
+[ZONE TRANSITION] t=388.00s vehicle=eastbound_flow.69 2 -> 3
+[ZONE TRANSITION] t=388.00s vehicle=eastbound_flow.87 0 -> 1
+[ZONE TRANSITION] t=389.00s vehicle=westbound_flow.60 1 -> 0
+[ZONE TRANSITION] t=389.00s vehicle=westbound_flow.63 2 -> 1
+[ZONE TRANSITION] t=390.00s vehicle=eastbound_flow.72 1 -> 2
+[ZONE TRANSITION] t=390.00s vehicle=eastbound_flow.88 0 -> 1
+[ZONE TRANSITION] t=390.00s vehicle=westbound_flow.57 1 -> 0
+[ZONE TRANSITION] t=390.00s vehicle=westbound_flow.87 4 -> 3
+[ZONE TRANSITION] t=390.00s vehicle=westbound_flow.88 4 -> 3
+[LSTM REFRESH] t=390.00s provider=eastbound_flow.93 zone=0 predicted_remaining=20.08s elapsed=304.00s
+[ZONE TRANSITION] t=391.00s vehicle=westbound_flow.79 3 -> 2
+[ZONE TRANSITION] t=392.00s vehicle=eastbound_flow.70 2 -> 3
+[ZONE TRANSITION] t=392.00s vehicle=westbound_flow.55 1 -> 0
+[ZONE TRANSITION] t=392.00s vehicle=westbound_flow.70 2 -> 1
+[ZONE TRANSITION] t=393.00s vehicle=eastbound_flow.61 3 -> 4
+[ZONE TRANSITION] t=393.00s vehicle=westbound_flow.61 1 -> 0
+[ZONE TRANSITION] t=393.00s vehicle=westbound_flow.69 2 -> 1
+[ZONE TRANSITION] t=394.00s vehicle=eastbound_flow.89 0 -> 1
+[ZONE TRANSITION] t=394.00s vehicle=westbound_flow.89 4 -> 3
+[ZONE TRANSITION] t=395.00s vehicle=westbound_flow.80 3 -> 2
+[ZONE TRANSITION] t=396.00s vehicle=westbound_flow.71 2 -> 1
+[ZONE TRANSITION] t=397.00s vehicle=eastbound_flow.62 3 -> 4
+[ZONE TRANSITION] t=397.00s vehicle=westbound_flow.62 1 -> 0
+[ZONE TRANSITION] t=398.00s vehicle=eastbound_flow.60 3 -> 4
+[ZONE TRANSITION] t=398.00s vehicle=eastbound_flow.79 1 -> 2
+[ZONE TRANSITION] t=398.00s vehicle=eastbound_flow.90 0 -> 1
+[ZONE TRANSITION] t=398.00s vehicle=westbound_flow.90 4 -> 3
+[ZONE TRANSITION] t=399.00s vehicle=eastbound_flow.81 1 -> 2
+[ZONE TRANSITION] t=399.00s vehicle=westbound_flow.81 3 -> 2
+[ZONE TRANSITION] t=400.00s vehicle=westbound_flow.72 2 -> 1
+[LSTM REFRESH] t=400.00s provider=eastbound_flow.93 zone=0 predicted_remaining=10.05s elapsed=314.00s
+[ZONE TRANSITION] t=401.00s vehicle=eastbound_flow.63 3 -> 4
+[ZONE TRANSITION] t=402.00s vehicle=eastbound_flow.91 0 -> 1
+[ZONE TRANSITION] t=402.00s vehicle=westbound_flow.91 4 -> 3
+[ZONE TRANSITION] t=403.00s vehicle=eastbound_flow.82 1 -> 2
+[ZONE TRANSITION] t=404.00s vehicle=eastbound_flow.71 2 -> 3
+[ZONE TRANSITION] t=404.00s vehicle=westbound_flow.73 2 -> 1
+[ZONE TRANSITION] t=405.00s vehicle=eastbound_flow.64 3 -> 4
+[ZONE TRANSITION] t=405.00s vehicle=eastbound_flow.80 1 -> 2
+[ZONE TRANSITION] t=405.00s vehicle=westbound_flow.64 1 -> 0
+
+[PREDICTIVE HANDOVER TRIGGER]
+  Time       : 406.00s
+  Provider   : eastbound_flow.93
+  Zone       : 0
+  LSTM prediction: 4.13s
+  Margin     : 5.00s
+
+[PRE-DEPARTURE HANDOVER]
+  Handover #     : 13
+  Source provider : eastbound_flow.93
+  Standby provider: eastbound_flow.99
+  Source zone     : 0
+  Standby zone    : 0
+  Standby CPU     : 4.00
+  LSTM residency  : 27.85s
+  Security        : VERIFIED
+  Resource        : CONTINUOUS
+[HANDOVER RESULT] SUCCESS
+[NEW PRIMARY] Provider=eastbound_flow.99 Prediction=27.85s
+[ZONE TRANSITION] t=407.00s vehicle=eastbound_flow.83 1 -> 2
+[ZONE TRANSITION] t=407.00s vehicle=westbound_flow.83 3 -> 2
+[ZONE TRANSITION] t=408.00s vehicle=westbound_flow.74 2 -> 1
+[ZONE TRANSITION] t=409.00s vehicle=eastbound_flow.65 3 -> 4
+[ZONE TRANSITION] t=409.00s vehicle=eastbound_flow.92 0 -> 1
+[ZONE TRANSITION] t=409.00s vehicle=westbound_flow.65 1 -> 0
+[ZONE TRANSITION] t=409.00s vehicle=westbound_flow.92 4 -> 3
+[ZONE TRANSITION] t=410.00s vehicle=eastbound_flow.93 0 -> 1
+[ZONE TRANSITION] t=410.00s vehicle=westbound_flow.82 3 -> 2
+[LSTM REFRESH] t=410.00s provider=eastbound_flow.99 zone=0 predicted_remaining=23.89s elapsed=324.00s
+[ZONE TRANSITION] t=412.00s vehicle=eastbound_flow.74 2 -> 3
+[ZONE TRANSITION] t=412.00s vehicle=eastbound_flow.84 1 -> 2
+[ZONE TRANSITION] t=412.00s vehicle=westbound_flow.75 2 -> 1
+[ZONE TRANSITION] t=413.00s vehicle=westbound_flow.66 1 -> 0
+[ZONE TRANSITION] t=415.00s vehicle=eastbound_flow.85 1 -> 2
+[ZONE TRANSITION] t=415.00s vehicle=eastbound_flow.94 0 -> 1
+[ZONE TRANSITION] t=415.00s vehicle=westbound_flow.93 4 -> 3
+[ZONE TRANSITION] t=415.00s vehicle=westbound_flow.94 4 -> 3
+[ZONE TRANSITION] t=416.00s vehicle=eastbound_flow.75 2 -> 3
+[ZONE TRANSITION] t=416.00s vehicle=eastbound_flow.76 2 -> 3
+[ZONE TRANSITION] t=416.00s vehicle=westbound_flow.67 1 -> 0
+[ZONE TRANSITION] t=416.00s vehicle=westbound_flow.84 3 -> 2
+[ZONE TRANSITION] t=417.00s vehicle=eastbound_flow.67 3 -> 4
+[ZONE TRANSITION] t=419.00s vehicle=eastbound_flow.66 3 -> 4
+[ZONE TRANSITION] t=419.00s vehicle=eastbound_flow.73 2 -> 3
+[ZONE TRANSITION] t=419.00s vehicle=westbound_flow.86 3 -> 2
+[ZONE TRANSITION] t=420.00s vehicle=eastbound_flow.77 2 -> 3
+[ZONE TRANSITION] t=420.00s vehicle=westbound_flow.77 2 -> 1
+[LSTM REFRESH] t=420.00s provider=eastbound_flow.99 zone=0 predicted_remaining=13.95s elapsed=334.00s
+[ZONE TRANSITION] t=421.00s vehicle=eastbound_flow.68 3 -> 4
+[ZONE TRANSITION] t=421.00s vehicle=westbound_flow.68 1 -> 0
+[ZONE TRANSITION] t=421.00s vehicle=westbound_flow.95 4 -> 3
+[ZONE TRANSITION] t=422.00s vehicle=eastbound_flow.95 0 -> 1
+[ZONE TRANSITION] t=422.00s vehicle=eastbound_flow.96 0 -> 1
+[ZONE TRANSITION] t=422.00s vehicle=westbound_flow.96 4 -> 3
+[ZONE TRANSITION] t=424.00s vehicle=eastbound_flow.78 2 -> 3
+[ZONE TRANSITION] t=424.00s vehicle=westbound_flow.78 2 -> 1
+[ZONE TRANSITION] t=424.00s vehicle=westbound_flow.85 3 -> 2
+[ZONE TRANSITION] t=425.00s vehicle=eastbound_flow.69 3 -> 4
+[ZONE TRANSITION] t=425.00s vehicle=westbound_flow.76 2 -> 1
+[ZONE TRANSITION] t=426.00s vehicle=eastbound_flow.97 0 -> 1
+[ZONE TRANSITION] t=427.00s vehicle=eastbound_flow.87 1 -> 2
+[ZONE TRANSITION] t=427.00s vehicle=eastbound_flow.88 1 -> 2
+[ZONE TRANSITION] t=427.00s vehicle=westbound_flow.88 3 -> 2
+[ZONE TRANSITION] t=428.00s vehicle=eastbound_flow.86 1 -> 2
+[ZONE TRANSITION] t=428.00s vehicle=westbound_flow.79 2 -> 1
+[ZONE TRANSITION] t=429.00s vehicle=eastbound_flow.70 3 -> 4
+[ZONE TRANSITION] t=429.00s vehicle=westbound_flow.70 1 -> 0
+[ZONE TRANSITION] t=430.00s vehicle=eastbound_flow.98 0 -> 1
+[ZONE TRANSITION] t=430.00s vehicle=westbound_flow.87 3 -> 2
+
+[PREDICTIVE HANDOVER TRIGGER]
+  Time       : 430.00s
+  Provider   : eastbound_flow.99
+  Zone       : 0
+  LSTM prediction: 4.24s
+  Margin     : 5.00s
+
+[PRE-DEPARTURE HANDOVER]
+  Handover #     : 14
+  Source provider : eastbound_flow.99
+  Standby provider: eastbound_flow.105
+  Source zone     : 0
+  Standby zone    : 0
+  Standby CPU     : 4.00
+  LSTM residency  : 27.79s
+  Security        : VERIFIED
+  Resource        : CONTINUOUS
+[HANDOVER RESULT] SUCCESS
+[NEW PRIMARY] Provider=eastbound_flow.105 Prediction=27.79s
+[ZONE TRANSITION] t=431.00s vehicle=eastbound_flow.89 1 -> 2
+[ZONE TRANSITION] t=431.00s vehicle=westbound_flow.89 3 -> 2
+[ZONE TRANSITION] t=432.00s vehicle=westbound_flow.69 1 -> 0
+[ZONE TRANSITION] t=432.00s vehicle=westbound_flow.80 2 -> 1
+[ZONE TRANSITION] t=433.00s vehicle=westbound_flow.71 1 -> 0
+[ZONE TRANSITION] t=433.00s vehicle=westbound_flow.97 4 -> 3
+[ZONE TRANSITION] t=434.00s vehicle=eastbound_flow.99 0 -> 1
+[ZONE TRANSITION] t=434.00s vehicle=westbound_flow.63 1 -> 0
+[ZONE TRANSITION] t=435.00s vehicle=eastbound_flow.90 1 -> 2
+[ZONE TRANSITION] t=435.00s vehicle=westbound_flow.90 3 -> 2
+[ZONE TRANSITION] t=436.00s vehicle=westbound_flow.72 1 -> 0
+[ZONE TRANSITION] t=436.00s vehicle=westbound_flow.81 2 -> 1
+[ZONE TRANSITION] t=436.00s vehicle=westbound_flow.98 4 -> 3
+[ZONE TRANSITION] t=437.00s vehicle=eastbound_flow.81 2 -> 3
+[ZONE TRANSITION] t=439.00s vehicle=eastbound_flow.79 2 -> 3
+[ZONE TRANSITION] t=439.00s vehicle=eastbound_flow.91 1 -> 2
+[ZONE TRANSITION] t=439.00s vehicle=westbound_flow.91 3 -> 2
+[ZONE TRANSITION] t=440.00s vehicle=eastbound_flow.100 0 -> 1
+[ZONE TRANSITION] t=440.00s vehicle=eastbound_flow.82 2 -> 3
+[LSTM REFRESH] t=440.00s provider=eastbound_flow.105 zone=0 predicted_remaining=17.82s elapsed=354.00s
+[ZONE TRANSITION] t=441.00s vehicle=eastbound_flow.72 2 -> 3
+[ZONE TRANSITION] t=441.00s vehicle=westbound_flow.73 1 -> 0
+[ZONE TRANSITION] t=442.00s vehicle=eastbound_flow.101 0 -> 1
+[ZONE TRANSITION] t=442.00s vehicle=westbound_flow.101 4 -> 3
+[ZONE TRANSITION] t=442.00s vehicle=westbound_flow.99 4 -> 3
+[ZONE TRANSITION] t=443.00s vehicle=eastbound_flow.71 3 -> 4
+[ZONE TRANSITION] t=444.00s vehicle=eastbound_flow.83 2 -> 3
+[ZONE TRANSITION] t=444.00s vehicle=westbound_flow.100 4 -> 3
+[ZONE TRANSITION] t=444.00s vehicle=westbound_flow.83 2 -> 1
+[ZONE TRANSITION] t=445.00s vehicle=westbound_flow.74 1 -> 0
+[ZONE TRANSITION] t=446.00s vehicle=eastbound_flow.102 0 -> 1
+[ZONE TRANSITION] t=446.00s vehicle=westbound_flow.102 4 -> 3
+[ZONE TRANSITION] t=447.00s vehicle=eastbound_flow.80 2 -> 3
+[ZONE TRANSITION] t=447.00s vehicle=eastbound_flow.93 1 -> 2
+[ZONE TRANSITION] t=448.00s vehicle=eastbound_flow.92 1 -> 2
+[ZONE TRANSITION] t=449.00s vehicle=westbound_flow.75 1 -> 0
+[ZONE TRANSITION] t=450.00s vehicle=eastbound_flow.103 0 -> 1
+[ZONE TRANSITION] t=450.00s vehicle=eastbound_flow.74 3 -> 4
+[ZONE TRANSITION] t=450.00s vehicle=eastbound_flow.84 2 -> 3
+[ZONE TRANSITION] t=450.00s vehicle=westbound_flow.82 2 -> 1
+[ZONE TRANSITION] t=450.00s vehicle=westbound_flow.92 3 -> 2
+[LSTM REFRESH] t=450.00s provider=eastbound_flow.105 zone=0 predicted_remaining=7.97s elapsed=364.00s
+[ZONE TRANSITION] t=451.00s vehicle=westbound_flow.103 4 -> 3
+[ZONE TRANSITION] t=452.00s vehicle=eastbound_flow.85 2 -> 3
+[ZONE TRANSITION] t=453.00s vehicle=eastbound_flow.76 3 -> 4
+[ZONE TRANSITION] t=453.00s vehicle=eastbound_flow.94 1 -> 2
+[ZONE TRANSITION] t=453.00s vehicle=westbound_flow.94 3 -> 2
+[ZONE TRANSITION] t=454.00s vehicle=eastbound_flow.75 3 -> 4
+
+[PREDICTIVE HANDOVER TRIGGER]
+  Time       : 454.00s
+  Provider   : eastbound_flow.105
+  Zone       : 0
+  LSTM prediction: 4.01s
+  Margin     : 5.00s
+
+[PRE-DEPARTURE HANDOVER]
+  Handover #     : 15
+  Source provider : eastbound_flow.105
+  Standby provider: eastbound_flow.111
+  Source zone     : 0
+  Standby zone    : 0
+  Standby CPU     : 4.00
+  LSTM residency  : 34.96s
+  Security        : VERIFIED
+  Resource        : CONTINUOUS
+[HANDOVER RESULT] SUCCESS
+[NEW PRIMARY] Provider=eastbound_flow.111 Prediction=34.96s
+[ZONE TRANSITION] t=455.00s vehicle=westbound_flow.104 4 -> 3
+[ZONE TRANSITION] t=455.00s vehicle=westbound_flow.84 2 -> 1
+[ZONE TRANSITION] t=456.00s vehicle=eastbound_flow.104 0 -> 1
+[ZONE TRANSITION] t=456.00s vehicle=westbound_flow.77 1 -> 0
+[ZONE TRANSITION] t=456.00s vehicle=westbound_flow.86 2 -> 1
+[ZONE TRANSITION] t=457.00s vehicle=eastbound_flow.77 3 -> 4
+[ZONE TRANSITION] t=457.00s vehicle=westbound_flow.93 3 -> 2
+[ZONE TRANSITION] t=458.00s vehicle=eastbound_flow.105 0 -> 1
+[ZONE TRANSITION] t=458.00s vehicle=westbound_flow.105 4 -> 3
+[ZONE TRANSITION] t=459.00s vehicle=eastbound_flow.96 1 -> 2
+[ZONE TRANSITION] t=459.00s vehicle=westbound_flow.96 3 -> 2
+[LSTM REFRESH] t=460.00s provider=eastbound_flow.111 zone=0 predicted_remaining=29.57s elapsed=374.00s
+[ZONE TRANSITION] t=461.00s vehicle=eastbound_flow.73 3 -> 4
+[ZONE TRANSITION] t=461.00s vehicle=eastbound_flow.78 3 -> 4
+[ZONE TRANSITION] t=461.00s vehicle=westbound_flow.78 1 -> 0
+[ZONE TRANSITION] t=461.00s vehicle=westbound_flow.95 3 -> 2
+[ZONE TRANSITION] t=462.00s vehicle=eastbound_flow.106 0 -> 1
+[ZONE TRANSITION] t=462.00s vehicle=westbound_flow.106 4 -> 3
+[ZONE TRANSITION] t=463.00s vehicle=eastbound_flow.95 1 -> 2
+[ZONE TRANSITION] t=463.00s vehicle=eastbound_flow.97 1 -> 2
+[ZONE TRANSITION] t=464.00s vehicle=eastbound_flow.88 2 -> 3
+[ZONE TRANSITION] t=464.00s vehicle=westbound_flow.88 2 -> 1
+[ZONE TRANSITION] t=465.00s vehicle=eastbound_flow.87 2 -> 3
+[ZONE TRANSITION] t=465.00s vehicle=westbound_flow.76 1 -> 0
+[ZONE TRANSITION] t=465.00s vehicle=westbound_flow.79 1 -> 0
+[ZONE TRANSITION] t=465.00s vehicle=westbound_flow.85 2 -> 1
+[ZONE TRANSITION] t=466.00s vehicle=westbound_flow.107 4 -> 3
+[ZONE TRANSITION] t=467.00s vehicle=eastbound_flow.98 1 -> 2
+[ZONE TRANSITION] t=468.00s vehicle=eastbound_flow.89 2 -> 3
+[ZONE TRANSITION] t=468.00s vehicle=westbound_flow.89 2 -> 1
+[ZONE TRANSITION] t=469.00s vehicle=westbound_flow.80 1 -> 0
+[ZONE TRANSITION] t=470.00s vehicle=eastbound_flow.86 2 -> 3
+[ZONE TRANSITION] t=470.00s vehicle=westbound_flow.108 4 -> 3
+[ZONE TRANSITION] t=470.00s vehicle=westbound_flow.87 2 -> 1
+[LSTM REFRESH] t=470.00s provider=eastbound_flow.111 zone=0 predicted_remaining=19.64s elapsed=384.00s
+[ZONE TRANSITION] t=471.00s vehicle=eastbound_flow.108 0 -> 1
+[ZONE TRANSITION] t=471.00s vehicle=eastbound_flow.99 1 -> 2
+[ZONE TRANSITION] t=472.00s vehicle=eastbound_flow.90 2 -> 3
+[ZONE TRANSITION] t=472.00s vehicle=westbound_flow.90 2 -> 1
+[ZONE TRANSITION] t=473.00s vehicle=westbound_flow.81 1 -> 0
+[ZONE TRANSITION] t=474.00s vehicle=eastbound_flow.107 0 -> 1
+[ZONE TRANSITION] t=474.00s vehicle=eastbound_flow.109 0 -> 1
+[ZONE TRANSITION] t=474.00s vehicle=eastbound_flow.81 3 -> 4
+[ZONE TRANSITION] t=476.00s vehicle=eastbound_flow.91 2 -> 3
+[ZONE TRANSITION] t=476.00s vehicle=westbound_flow.91 2 -> 1
+[ZONE TRANSITION] t=477.00s vehicle=eastbound_flow.82 3 -> 4
+[ZONE TRANSITION] t=477.00s vehicle=westbound_flow.97 3 -> 2
+[ZONE TRANSITION] t=478.00s vehicle=eastbound_flow.110 0 -> 1
+[ZONE TRANSITION] t=478.00s vehicle=westbound_flow.109 4 -> 3
+[ZONE TRANSITION] t=478.00s vehicle=westbound_flow.110 4 -> 3
+[ZONE TRANSITION] t=478.00s vehicle=westbound_flow.98 3 -> 2
+[ZONE TRANSITION] t=479.00s vehicle=eastbound_flow.100 1 -> 2
+[ZONE TRANSITION] t=479.00s vehicle=eastbound_flow.101 1 -> 2
+[ZONE TRANSITION] t=479.00s vehicle=westbound_flow.101 3 -> 2
+[ZONE TRANSITION] t=480.00s vehicle=eastbound_flow.79 3 -> 4
+[LSTM REFRESH] t=480.00s provider=eastbound_flow.111 zone=0 predicted_remaining=9.84s elapsed=394.00s
+[ZONE TRANSITION] t=481.00s vehicle=eastbound_flow.83 3 -> 4
+[ZONE TRANSITION] t=481.00s vehicle=westbound_flow.83 1 -> 0
+[ZONE TRANSITION] t=482.00s vehicle=westbound_flow.111 4 -> 3
+[ZONE TRANSITION] t=483.00s vehicle=eastbound_flow.102 1 -> 2
+[ZONE TRANSITION] t=483.00s vehicle=westbound_flow.102 3 -> 2
+[ZONE TRANSITION] t=484.00s vehicle=eastbound_flow.93 2 -> 3
+
+[PREDICTIVE HANDOVER TRIGGER]
+  Time       : 485.00s
+  Provider   : eastbound_flow.111
+  Zone       : 0
+  LSTM prediction: 4.94s
+  Margin     : 5.00s
+
+[PRE-DEPARTURE HANDOVER]
+  Handover #     : 16
+  Source provider : eastbound_flow.111
+  Standby provider: eastbound_flow.118
+  Source zone     : 0
+  Standby zone    : 0
+  Standby CPU     : 8.00
+  LSTM residency  : 25.18s
+  Security        : VERIFIED
+  Resource        : CONTINUOUS
+[HANDOVER RESULT] SUCCESS
+[NEW PRIMARY] Provider=eastbound_flow.118 Prediction=25.18s
+[ZONE TRANSITION] t=486.00s vehicle=eastbound_flow.112 0 -> 1
+[ZONE TRANSITION] t=487.00s vehicle=eastbound_flow.103 1 -> 2
+[ZONE TRANSITION] t=487.00s vehicle=eastbound_flow.92 2 -> 3
+[ZONE TRANSITION] t=487.00s vehicle=westbound_flow.100 3 -> 2
+[ZONE TRANSITION] t=487.00s vehicle=westbound_flow.112 4 -> 3
+[ZONE TRANSITION] t=487.00s vehicle=westbound_flow.99 3 -> 2
+[ZONE TRANSITION] t=488.00s vehicle=eastbound_flow.84 3 -> 4
+[ZONE TRANSITION] t=489.00s vehicle=eastbound_flow.85 3 -> 4
+[ZONE TRANSITION] t=489.00s vehicle=westbound_flow.103 3 -> 2
+[ZONE TRANSITION] t=490.00s vehicle=eastbound_flow.111 0 -> 1
+[ZONE TRANSITION] t=490.00s vehicle=eastbound_flow.113 0 -> 1
+[ZONE TRANSITION] t=490.00s vehicle=westbound_flow.113 4 -> 3
+[ZONE TRANSITION] t=490.00s vehicle=westbound_flow.92 2 -> 1
+[LSTM REFRESH] t=490.00s provider=eastbound_flow.118 zone=0 predicted_remaining=20.10s elapsed=404.00s
+[ZONE TRANSITION] t=491.00s vehicle=eastbound_flow.80 3 -> 4
+[ZONE TRANSITION] t=491.00s vehicle=eastbound_flow.94 2 -> 3
+[ZONE TRANSITION] t=491.00s vehicle=westbound_flow.82 1 -> 0
+[ZONE TRANSITION] t=491.00s vehicle=westbound_flow.94 2 -> 1
+[ZONE TRANSITION] t=492.00s vehicle=eastbound_flow.72 3 -> 4
+[ZONE TRANSITION] t=492.00s vehicle=westbound_flow.104 3 -> 2
+[ZONE TRANSITION] t=493.00s vehicle=westbound_flow.86 1 -> 0
+[ZONE TRANSITION] t=494.00s vehicle=eastbound_flow.104 1 -> 2
+[ZONE TRANSITION] t=494.00s vehicle=eastbound_flow.114 0 -> 1
+[ZONE TRANSITION] t=494.00s vehicle=westbound_flow.114 4 -> 3
+[ZONE TRANSITION] t=494.00s vehicle=westbound_flow.84 1 -> 0
+[ZONE TRANSITION] t=495.00s vehicle=eastbound_flow.105 1 -> 2
+[ZONE TRANSITION] t=495.00s vehicle=westbound_flow.105 3 -> 2
+[ZONE TRANSITION] t=496.00s vehicle=eastbound_flow.96 2 -> 3
+[ZONE TRANSITION] t=496.00s vehicle=westbound_flow.96 2 -> 1
+[ZONE TRANSITION] t=498.00s vehicle=eastbound_flow.115 0 -> 1
+[ZONE TRANSITION] t=498.00s vehicle=westbound_flow.115 4 -> 3
+[ZONE TRANSITION] t=498.00s vehicle=westbound_flow.93 2 -> 1
+[ZONE TRANSITION] t=499.00s vehicle=eastbound_flow.106 1 -> 2
+[ZONE TRANSITION] t=499.00s vehicle=westbound_flow.106 3 -> 2
+[ZONE TRANSITION] t=500.00s vehicle=eastbound_flow.97 2 -> 3
+[LSTM REFRESH] t=500.00s provider=eastbound_flow.118 zone=0 predicted_remaining=10.31s elapsed=414.00s
+[ZONE TRANSITION] t=501.00s vehicle=eastbound_flow.88 3 -> 4
+[ZONE TRANSITION] t=501.00s vehicle=westbound_flow.88 1 -> 0
+[ZONE TRANSITION] t=501.00s vehicle=westbound_flow.95 2 -> 1
+[ZONE TRANSITION] t=502.00s vehicle=westbound_flow.116 4 -> 3
+[ZONE TRANSITION] t=503.00s vehicle=eastbound_flow.116 0 -> 1
+[ZONE TRANSITION] t=503.00s vehicle=westbound_flow.107 3 -> 2
+[ZONE TRANSITION] t=504.00s vehicle=eastbound_flow.87 3 -> 4
+[ZONE TRANSITION] t=504.00s vehicle=eastbound_flow.95 2 -> 3
+[ZONE TRANSITION] t=504.00s vehicle=eastbound_flow.98 2 -> 3
+[ZONE TRANSITION] t=505.00s vehicle=eastbound_flow.89 3 -> 4
+[ZONE TRANSITION] t=505.00s vehicle=westbound_flow.89 1 -> 0
+[ZONE TRANSITION] t=506.00s vehicle=westbound_flow.85 1 -> 0
+
+[PREDICTIVE HANDOVER TRIGGER]
+  Time       : 506.00s
+  Provider   : eastbound_flow.118
+  Zone       : 0
+  LSTM prediction: 4.21s
+  Margin     : 5.00s
+
+[PRE-DEPARTURE HANDOVER]
+  Handover #     : 17
+  Source provider : eastbound_flow.118
+  Standby provider: eastbound_flow.124
+  Source zone     : 0
+  Standby zone    : 0
+  Standby CPU     : 8.00
+  LSTM residency  : 27.83s
+  Security        : VERIFIED
+  Resource        : CONTINUOUS
+[HANDOVER RESULT] SUCCESS
+[NEW PRIMARY] Provider=eastbound_flow.124 Prediction=27.83s
+[ZONE TRANSITION] t=507.00s vehicle=westbound_flow.108 3 -> 2
+[ZONE TRANSITION] t=508.00s vehicle=eastbound_flow.99 2 -> 3
+[ZONE TRANSITION] t=508.00s vehicle=westbound_flow.117 4 -> 3
+[ZONE TRANSITION] t=509.00s vehicle=eastbound_flow.108 1 -> 2
+[ZONE TRANSITION] t=509.00s vehicle=eastbound_flow.90 3 -> 4
+[ZONE TRANSITION] t=509.00s vehicle=westbound_flow.90 1 -> 0
+[ZONE TRANSITION] t=510.00s vehicle=eastbound_flow.117 0 -> 1
+[ZONE TRANSITION] t=510.00s vehicle=eastbound_flow.118 0 -> 1
+[ZONE TRANSITION] t=510.00s vehicle=westbound_flow.87 1 -> 0
+[LSTM REFRESH] t=510.00s provider=eastbound_flow.124 zone=0 predicted_remaining=24.07s elapsed=424.00s
+[ZONE TRANSITION] t=511.00s vehicle=eastbound_flow.109 1 -> 2
+[ZONE TRANSITION] t=511.00s vehicle=eastbound_flow.86 3 -> 4
+[ZONE TRANSITION] t=513.00s vehicle=eastbound_flow.91 3 -> 4
+[ZONE TRANSITION] t=513.00s vehicle=westbound_flow.91 1 -> 0
+[ZONE TRANSITION] t=514.00s vehicle=eastbound_flow.119 0 -> 1
+[ZONE TRANSITION] t=514.00s vehicle=westbound_flow.119 4 -> 3
+[ZONE TRANSITION] t=515.00s vehicle=westbound_flow.110 3 -> 2
+[ZONE TRANSITION] t=515.00s vehicle=westbound_flow.118 4 -> 3
+[ZONE TRANSITION] t=516.00s vehicle=eastbound_flow.101 2 -> 3
+[ZONE TRANSITION] t=516.00s vehicle=eastbound_flow.110 1 -> 2
+[ZONE TRANSITION] t=516.00s vehicle=westbound_flow.101 2 -> 1
+[ZONE TRANSITION] t=518.00s vehicle=eastbound_flow.100 2 -> 3
+[ZONE TRANSITION] t=518.00s vehicle=westbound_flow.120 4 -> 3
+[ZONE TRANSITION] t=519.00s vehicle=eastbound_flow.107 1 -> 2
+[ZONE TRANSITION] t=519.00s vehicle=westbound_flow.109 3 -> 2
+[ZONE TRANSITION] t=519.00s vehicle=westbound_flow.111 3 -> 2
+[ZONE TRANSITION] t=520.00s vehicle=eastbound_flow.102 2 -> 3
+[ZONE TRANSITION] t=520.00s vehicle=eastbound_flow.120 0 -> 1
+[ZONE TRANSITION] t=520.00s vehicle=westbound_flow.102 2 -> 1
+[ZONE TRANSITION] t=520.00s vehicle=westbound_flow.98 2 -> 1
+[LSTM REFRESH] t=520.00s provider=eastbound_flow.124 zone=0 predicted_remaining=13.89s elapsed=434.00s
+[ZONE TRANSITION] t=521.00s vehicle=eastbound_flow.93 3 -> 4
+[ZONE TRANSITION] t=521.00s vehicle=westbound_flow.97 2 -> 1
+[ZONE TRANSITION] t=523.00s vehicle=eastbound_flow.112 1 -> 2
+[ZONE TRANSITION] t=523.00s vehicle=eastbound_flow.121 0 -> 1
+[ZONE TRANSITION] t=523.00s vehicle=westbound_flow.121 4 -> 3
+[ZONE TRANSITION] t=524.00s vehicle=eastbound_flow.103 2 -> 3
+[ZONE TRANSITION] t=526.00s vehicle=eastbound_flow.122 0 -> 1
+[ZONE TRANSITION] t=526.00s vehicle=eastbound_flow.92 3 -> 4
+[ZONE TRANSITION] t=526.00s vehicle=westbound_flow.112 3 -> 2
+[ZONE TRANSITION] t=526.00s vehicle=westbound_flow.122 4 -> 3
+[ZONE TRANSITION] t=527.00s vehicle=eastbound_flow.113 1 -> 2
+[ZONE TRANSITION] t=527.00s vehicle=westbound_flow.113 3 -> 2
+[ZONE TRANSITION] t=528.00s vehicle=westbound_flow.103 2 -> 1
+[ZONE TRANSITION] t=529.00s vehicle=eastbound_flow.94 3 -> 4
+[ZONE TRANSITION] t=529.00s vehicle=westbound_flow.100 2 -> 1
+[ZONE TRANSITION] t=529.00s vehicle=westbound_flow.94 1 -> 0
+[ZONE TRANSITION] t=530.00s vehicle=westbound_flow.104 2 -> 1
+[ZONE TRANSITION] t=530.00s vehicle=westbound_flow.123 4 -> 3
+
+[PREDICTIVE HANDOVER TRIGGER]
+  Time       : 530.00s
+  Provider   : eastbound_flow.124
+  Zone       : 0
+  LSTM prediction: 4.22s
+  Margin     : 5.00s
+
+[PRE-DEPARTURE HANDOVER]
+  Handover #     : 18
+  Source provider : eastbound_flow.124
+  Standby provider: eastbound_flow.130
+  Source zone     : 0
+  Standby zone    : 0
+  Standby CPU     : 8.00
+  LSTM residency  : 36.62s
+  Security        : VERIFIED
+  Resource        : CONTINUOUS
+[HANDOVER RESULT] SUCCESS
+[NEW PRIMARY] Provider=eastbound_flow.130 Prediction=36.62s
+[ZONE TRANSITION] t=531.00s vehicle=eastbound_flow.114 1 -> 2
+[ZONE TRANSITION] t=531.00s vehicle=eastbound_flow.123 0 -> 1
+[ZONE TRANSITION] t=531.00s vehicle=westbound_flow.114 3 -> 2
+[ZONE TRANSITION] t=531.00s vehicle=westbound_flow.92 1 -> 0
+[ZONE TRANSITION] t=532.00s vehicle=eastbound_flow.104 2 -> 3
+[ZONE TRANSITION] t=532.00s vehicle=eastbound_flow.105 2 -> 3
+[ZONE TRANSITION] t=532.00s vehicle=westbound_flow.105 2 -> 1
+[ZONE TRANSITION] t=532.00s vehicle=westbound_flow.99 2 -> 1
+[ZONE TRANSITION] t=533.00s vehicle=eastbound_flow.96 3 -> 4
+[ZONE TRANSITION] t=533.00s vehicle=westbound_flow.96 1 -> 0
+[ZONE TRANSITION] t=534.00s vehicle=eastbound_flow.111 1 -> 2
+[ZONE TRANSITION] t=534.00s vehicle=eastbound_flow.124 0 -> 1
+[ZONE TRANSITION] t=534.00s vehicle=westbound_flow.124 4 -> 3
+[ZONE TRANSITION] t=535.00s vehicle=eastbound_flow.115 1 -> 2
+[ZONE TRANSITION] t=535.00s vehicle=westbound_flow.115 3 -> 2
+[ZONE TRANSITION] t=536.00s vehicle=eastbound_flow.106 2 -> 3
+[ZONE TRANSITION] t=536.00s vehicle=westbound_flow.106 2 -> 1
+[ZONE TRANSITION] t=537.00s vehicle=eastbound_flow.97 3 -> 4
+[ZONE TRANSITION] t=539.00s vehicle=westbound_flow.116 3 -> 2
+[ZONE TRANSITION] t=539.00s vehicle=westbound_flow.93 1 -> 0
+[ZONE TRANSITION] t=540.00s vehicle=westbound_flow.107 2 -> 1
+[LSTM REFRESH] t=540.00s provider=eastbound_flow.130 zone=0 predicted_remaining=30.55s elapsed=454.00s
+[ZONE TRANSITION] t=541.00s vehicle=eastbound_flow.116 1 -> 2
+[ZONE TRANSITION] t=541.00s vehicle=eastbound_flow.125 0 -> 1
+[ZONE TRANSITION] t=541.00s vehicle=eastbound_flow.98 3 -> 4
+[ZONE TRANSITION] t=541.00s vehicle=westbound_flow.95 1 -> 0
+[ZONE TRANSITION] t=543.00s vehicle=eastbound_flow.126 0 -> 1
+[ZONE TRANSITION] t=543.00s vehicle=westbound_flow.125 4 -> 3
+[ZONE TRANSITION] t=543.00s vehicle=westbound_flow.126 4 -> 3
+[ZONE TRANSITION] t=544.00s vehicle=westbound_flow.108 2 -> 1
+[ZONE TRANSITION] t=545.00s vehicle=eastbound_flow.95 3 -> 4
+[ZONE TRANSITION] t=545.00s vehicle=eastbound_flow.99 3 -> 4
+[ZONE TRANSITION] t=546.00s vehicle=westbound_flow.117 3 -> 2
+[ZONE TRANSITION] t=547.00s vehicle=eastbound_flow.118 1 -> 2
+[ZONE TRANSITION] t=548.00s vehicle=eastbound_flow.108 2 -> 3
+[ZONE TRANSITION] t=548.00s vehicle=eastbound_flow.109 2 -> 3
+[ZONE TRANSITION] t=550.00s vehicle=eastbound_flow.117 1 -> 2
+[ZONE TRANSITION] t=550.00s vehicle=westbound_flow.128 4 -> 3
+[LSTM REFRESH] t=550.00s provider=eastbound_flow.130 zone=0 predicted_remaining=20.85s elapsed=464.00s
+[ZONE TRANSITION] t=551.00s vehicle=eastbound_flow.119 1 -> 2
+[ZONE TRANSITION] t=551.00s vehicle=eastbound_flow.127 0 -> 1
+[ZONE TRANSITION] t=551.00s vehicle=westbound_flow.119 3 -> 2
+[ZONE TRANSITION] t=552.00s vehicle=eastbound_flow.128 0 -> 1
+[ZONE TRANSITION] t=552.00s vehicle=westbound_flow.110 2 -> 1
+[ZONE TRANSITION] t=553.00s vehicle=eastbound_flow.101 3 -> 4
+[ZONE TRANSITION] t=553.00s vehicle=eastbound_flow.110 2 -> 3
+[ZONE TRANSITION] t=553.00s vehicle=westbound_flow.101 1 -> 0
+[ZONE TRANSITION] t=554.00s vehicle=eastbound_flow.129 0 -> 1
+[ZONE TRANSITION] t=555.00s vehicle=westbound_flow.120 3 -> 2
+[ZONE TRANSITION] t=556.00s vehicle=westbound_flow.111 2 -> 1
+[ZONE TRANSITION] t=557.00s vehicle=eastbound_flow.100 3 -> 4
+[ZONE TRANSITION] t=557.00s vehicle=eastbound_flow.102 3 -> 4
+[ZONE TRANSITION] t=557.00s vehicle=westbound_flow.102 1 -> 0
+[ZONE TRANSITION] t=557.00s vehicle=westbound_flow.118 3 -> 2
+[ZONE TRANSITION] t=558.00s vehicle=westbound_flow.130 4 -> 3
+[ZONE TRANSITION] t=559.00s vehicle=eastbound_flow.120 1 -> 2
+[ZONE TRANSITION] t=559.00s vehicle=westbound_flow.109 2 -> 1
+[ZONE TRANSITION] t=560.00s vehicle=eastbound_flow.112 2 -> 3
+[ZONE TRANSITION] t=560.00s vehicle=westbound_flow.121 3 -> 2
+[LSTM REFRESH] t=560.00s provider=eastbound_flow.130 zone=0 predicted_remaining=10.86s elapsed=474.00s
+[ZONE TRANSITION] t=561.00s vehicle=eastbound_flow.103 3 -> 4
+[ZONE TRANSITION] t=561.00s vehicle=eastbound_flow.121 1 -> 2
+[ZONE TRANSITION] t=562.00s vehicle=eastbound_flow.131 0 -> 1
+[ZONE TRANSITION] t=562.00s vehicle=westbound_flow.127 4 -> 3
+[ZONE TRANSITION] t=562.00s vehicle=westbound_flow.129 4 -> 3
+[ZONE TRANSITION] t=563.00s vehicle=eastbound_flow.107 2 -> 3
+[ZONE TRANSITION] t=563.00s vehicle=eastbound_flow.122 1 -> 2
+[ZONE TRANSITION] t=563.00s vehicle=westbound_flow.122 3 -> 2
+[ZONE TRANSITION] t=563.00s vehicle=westbound_flow.98 1 -> 0
+[ZONE TRANSITION] t=564.00s vehicle=eastbound_flow.113 2 -> 3
+[ZONE TRANSITION] t=564.00s vehicle=westbound_flow.112 2 -> 1
+[ZONE TRANSITION] t=564.00s vehicle=westbound_flow.113 2 -> 1
+[ZONE TRANSITION] t=564.00s vehicle=westbound_flow.131 4 -> 3
+[ZONE TRANSITION] t=565.00s vehicle=westbound_flow.97 1 -> 0
+[ZONE TRANSITION] t=566.00s vehicle=eastbound_flow.132 0 -> 1
+[ZONE TRANSITION] t=566.00s vehicle=westbound_flow.103 1 -> 0
+[ZONE TRANSITION] t=567.00s vehicle=westbound_flow.104 1 -> 0
+[ZONE TRANSITION] t=567.00s vehicle=westbound_flow.123 3 -> 2
+[ZONE TRANSITION] t=567.00s vehicle=westbound_flow.132 4 -> 3
+
+[PREDICTIVE HANDOVER TRIGGER]
+  Time       : 567.00s
+  Provider   : eastbound_flow.130
+  Zone       : 0
+  LSTM prediction: 4.08s
+  Margin     : 5.00s
+
+[PRE-DEPARTURE HANDOVER]
+  Handover #     : 19
+  Source provider : eastbound_flow.130
+  Standby provider: eastbound_flow.138
+  Source zone     : 0
+  Standby zone    : 0
+  Standby CPU     : 4.00
+  LSTM residency  : 28.96s
+  Security        : VERIFIED
+  Resource        : CONTINUOUS
+[HANDOVER RESULT] SUCCESS
+[NEW PRIMARY] Provider=eastbound_flow.138 Prediction=28.96s
+[ZONE TRANSITION] t=568.00s vehicle=eastbound_flow.114 2 -> 3
+[ZONE TRANSITION] t=569.00s vehicle=eastbound_flow.105 3 -> 4
+[ZONE TRANSITION] t=569.00s vehicle=eastbound_flow.123 1 -> 2
+[ZONE TRANSITION] t=569.00s vehicle=westbound_flow.105 1 -> 0
+[ZONE TRANSITION] t=569.00s vehicle=westbound_flow.114 2 -> 1
+[LSTM REFRESH] t=570.00s provider=eastbound_flow.138 zone=0 predicted_remaining=25.98s elapsed=484.00s
+[ZONE TRANSITION] t=571.00s vehicle=eastbound_flow.104 3 -> 4
+[ZONE TRANSITION] t=571.00s vehicle=eastbound_flow.124 1 -> 2
+[ZONE TRANSITION] t=571.00s vehicle=eastbound_flow.130 0 -> 1
+[ZONE TRANSITION] t=571.00s vehicle=eastbound_flow.133 0 -> 1
+[ZONE TRANSITION] t=571.00s vehicle=westbound_flow.100 1 -> 0
+[ZONE TRANSITION] t=571.00s vehicle=westbound_flow.124 3 -> 2
+[ZONE TRANSITION] t=572.00s vehicle=eastbound_flow.115 2 -> 3
+[ZONE TRANSITION] t=572.00s vehicle=westbound_flow.115 2 -> 1
+[ZONE TRANSITION] t=573.00s vehicle=eastbound_flow.106 3 -> 4
+[ZONE TRANSITION] t=573.00s vehicle=westbound_flow.106 1 -> 0
+[ZONE TRANSITION] t=574.00s vehicle=westbound_flow.133 4 -> 3
+[ZONE TRANSITION] t=574.00s vehicle=westbound_flow.134 4 -> 3
+[ZONE TRANSITION] t=576.00s vehicle=eastbound_flow.134 0 -> 1
+[ZONE TRANSITION] t=576.00s vehicle=westbound_flow.116 2 -> 1
+[ZONE TRANSITION] t=576.00s vehicle=westbound_flow.99 1 -> 0
+[ZONE TRANSITION] t=577.00s vehicle=westbound_flow.107 1 -> 0
+[ZONE TRANSITION] t=578.00s vehicle=eastbound_flow.111 2 -> 3
+[ZONE TRANSITION] t=579.00s vehicle=eastbound_flow.135 0 -> 1
+[ZONE TRANSITION] t=580.00s vehicle=eastbound_flow.116 2 -> 3
+[ZONE TRANSITION] t=580.00s vehicle=eastbound_flow.126 1 -> 2
+[LSTM REFRESH] t=580.00s provider=eastbound_flow.138 zone=0 predicted_remaining=15.71s elapsed=494.00s
+[ZONE TRANSITION] t=581.00s vehicle=eastbound_flow.125 1 -> 2
+[ZONE TRANSITION] t=581.00s vehicle=westbound_flow.108 1 -> 0
+[ZONE TRANSITION] t=581.00s vehicle=westbound_flow.126 3 -> 2
+[ZONE TRANSITION] t=582.00s vehicle=eastbound_flow.136 0 -> 1
+[ZONE TRANSITION] t=583.00s vehicle=westbound_flow.136 4 -> 3
+[ZONE TRANSITION] t=584.00s vehicle=eastbound_flow.109 3 -> 4
+[ZONE TRANSITION] t=584.00s vehicle=eastbound_flow.118 2 -> 3
+[ZONE TRANSITION] t=584.00s vehicle=westbound_flow.135 4 -> 3
+[ZONE TRANSITION] t=585.00s vehicle=westbound_flow.117 2 -> 1
+[ZONE TRANSITION] t=586.00s vehicle=eastbound_flow.108 3 -> 4
+[ZONE TRANSITION] t=586.00s vehicle=westbound_flow.125 3 -> 2
+[ZONE TRANSITION] t=587.00s vehicle=westbound_flow.128 3 -> 2
+[ZONE TRANSITION] t=587.00s vehicle=westbound_flow.137 4 -> 3
+[ZONE TRANSITION] t=588.00s vehicle=eastbound_flow.119 2 -> 3
+[ZONE TRANSITION] t=588.00s vehicle=westbound_flow.119 2 -> 1
+[ZONE TRANSITION] t=589.00s vehicle=westbound_flow.110 1 -> 0
+[ZONE TRANSITION] t=590.00s vehicle=eastbound_flow.110 3 -> 4
+[ZONE TRANSITION] t=590.00s vehicle=eastbound_flow.128 1 -> 2
+[ZONE TRANSITION] t=590.00s vehicle=westbound_flow.138 4 -> 3
+[LSTM REFRESH] t=590.00s provider=eastbound_flow.138 zone=0 predicted_remaining=6.11s elapsed=504.00s
+[ZONE TRANSITION] t=591.00s vehicle=eastbound_flow.117 2 -> 3
+[ZONE TRANSITION] t=591.00s vehicle=eastbound_flow.129 1 -> 2
+[ZONE TRANSITION] t=592.00s vehicle=eastbound_flow.137 0 -> 1
+[ZONE TRANSITION] t=592.00s vehicle=westbound_flow.120 2 -> 1
+
+[PREDICTIVE HANDOVER TRIGGER]
+  Time       : 592.00s
+  Provider   : eastbound_flow.138
+  Zone       : 0
+  LSTM prediction: 4.06s
+  Margin     : 5.00s
+
+[PRE-DEPARTURE HANDOVER]
+  Handover #     : 20
+  Source provider : eastbound_flow.138
+  Standby provider: eastbound_flow.145
+  Source zone     : 0
+  Standby zone    : 0
+  Standby CPU     : 8.00
+  LSTM residency  : 27.23s
+  Security        : VERIFIED
+  Resource        : CONTINUOUS
+[HANDOVER RESULT] SUCCESS
+[NEW PRIMARY] Provider=eastbound_flow.145 Prediction=27.23s
+[ZONE TRANSITION] t=593.00s vehicle=eastbound_flow.127 1 -> 2
+[ZONE TRANSITION] t=593.00s vehicle=westbound_flow.111 1 -> 0
+[ZONE TRANSITION] t=595.00s vehicle=eastbound_flow.139 0 -> 1
+[ZONE TRANSITION] t=595.00s vehicle=westbound_flow.130 3 -> 2
+[ZONE TRANSITION] t=595.00s vehicle=westbound_flow.139 4 -> 3
+[ZONE TRANSITION] t=596.00s vehicle=eastbound_flow.138 0 -> 1
+[ZONE TRANSITION] t=597.00s vehicle=eastbound_flow.112 3 -> 4
+[ZONE TRANSITION] t=597.00s vehicle=westbound_flow.121 2 -> 1
+[ZONE TRANSITION] t=598.00s vehicle=eastbound_flow.120 2 -> 3
+[ZONE TRANSITION] t=598.00s vehicle=eastbound_flow.140 0 -> 1
+[ZONE TRANSITION] t=598.00s vehicle=westbound_flow.118 2 -> 1
+[ZONE TRANSITION] t=598.00s vehicle=westbound_flow.140 4 -> 3
+[ZONE TRANSITION] t=599.00s vehicle=eastbound_flow.121 2 -> 3
+[ZONE TRANSITION] t=599.00s vehicle=eastbound_flow.131 1 -> 2
+[ZONE TRANSITION] t=600.00s vehicle=eastbound_flow.122 2 -> 3
+[ZONE TRANSITION] t=600.00s vehicle=westbound_flow.109 1 -> 0
+[ZONE TRANSITION] t=600.00s vehicle=westbound_flow.122 2 -> 1
+[LSTM REFRESH] t=600.00s provider=eastbound_flow.145 zone=0 predicted_remaining=18.92s elapsed=514.00s
+[ZONE TRANSITION] t=601.00s vehicle=eastbound_flow.113 3 -> 4
+[ZONE TRANSITION] t=601.00s vehicle=westbound_flow.113 1 -> 0
+[ZONE TRANSITION] t=602.00s vehicle=westbound_flow.112 1 -> 0
+[ZONE TRANSITION] t=602.00s vehicle=westbound_flow.131 3 -> 2
+[ZONE TRANSITION] t=602.00s vehicle=westbound_flow.141 4 -> 3
+[ZONE TRANSITION] t=603.00s vehicle=eastbound_flow.132 1 -> 2
+[ZONE TRANSITION] t=604.00s vehicle=eastbound_flow.141 0 -> 1
+[ZONE TRANSITION] t=604.00s vehicle=westbound_flow.123 2 -> 1
+[ZONE TRANSITION] t=605.00s vehicle=eastbound_flow.114 3 -> 4
+[ZONE TRANSITION] t=605.00s vehicle=westbound_flow.114 1 -> 0
+[ZONE TRANSITION] t=606.00s vehicle=westbound_flow.129 3 -> 2
+[ZONE TRANSITION] t=606.00s vehicle=westbound_flow.132 3 -> 2
+[ZONE TRANSITION] t=606.00s vehicle=westbound_flow.142 4 -> 3
+[ZONE TRANSITION] t=607.00s vehicle=eastbound_flow.123 2 -> 3
+[ZONE TRANSITION] t=608.00s vehicle=eastbound_flow.107 3 -> 4
+[ZONE TRANSITION] t=608.00s vehicle=eastbound_flow.124 2 -> 3
+[ZONE TRANSITION] t=608.00s vehicle=westbound_flow.124 2 -> 1
+[ZONE TRANSITION] t=609.00s vehicle=eastbound_flow.115 3 -> 4
+[ZONE TRANSITION] t=609.00s vehicle=eastbound_flow.133 1 -> 2
+[ZONE TRANSITION] t=609.00s vehicle=westbound_flow.115 1 -> 0
+[LSTM REFRESH] t=610.00s provider=eastbound_flow.145 zone=0 predicted_remaining=9.07s elapsed=524.00s
+[ZONE TRANSITION] t=611.00s vehicle=eastbound_flow.143 0 -> 1
+[ZONE TRANSITION] t=611.00s vehicle=westbound_flow.134 3 -> 2
+[ZONE TRANSITION] t=613.00s vehicle=westbound_flow.116 1 -> 0
+[ZONE TRANSITION] t=614.00s vehicle=eastbound_flow.134 1 -> 2
+[ZONE TRANSITION] t=614.00s vehicle=eastbound_flow.144 0 -> 1
+[ZONE TRANSITION] t=614.00s vehicle=westbound_flow.127 3 -> 2
+[ZONE TRANSITION] t=614.00s vehicle=westbound_flow.133 3 -> 2
+[ZONE TRANSITION] t=614.00s vehicle=westbound_flow.144 4 -> 3
+[ZONE TRANSITION] t=615.00s vehicle=westbound_flow.143 4 -> 3
+
+[PREDICTIVE HANDOVER TRIGGER]
+  Time       : 615.00s
+  Provider   : eastbound_flow.145
+  Zone       : 0
+  LSTM prediction: 4.29s
+  Margin     : 5.00s
+
+[PRE-DEPARTURE HANDOVER]
+  Handover #     : 21
+  Source provider : eastbound_flow.145
+  Standby provider: eastbound_flow.149
+  Source zone     : 0
+  Standby zone    : 0
+  Standby CPU     : 12.00
+  LSTM residency  : 19.42s
+  Security        : VERIFIED
+  Resource        : CONTINUOUS
+[HANDOVER RESULT] SUCCESS
+[NEW PRIMARY] Provider=eastbound_flow.149 Prediction=19.42s
+[ZONE TRANSITION] t=617.00s vehicle=eastbound_flow.126 2 -> 3
+[ZONE TRANSITION] t=618.00s vehicle=eastbound_flow.116 3 -> 4
+[ZONE TRANSITION] t=618.00s vehicle=eastbound_flow.135 1 -> 2
+[ZONE TRANSITION] t=618.00s vehicle=eastbound_flow.142 0 -> 1
+[ZONE TRANSITION] t=618.00s vehicle=westbound_flow.126 2 -> 1
+[ZONE TRANSITION] t=619.00s vehicle=eastbound_flow.136 1 -> 2
+[ZONE TRANSITION] t=619.00s vehicle=eastbound_flow.145 0 -> 1
+[ZONE TRANSITION] t=620.00s vehicle=eastbound_flow.125 2 -> 3
+[ZONE TRANSITION] t=620.00s vehicle=eastbound_flow.130 1 -> 2
+[ZONE TRANSITION] t=620.00s vehicle=westbound_flow.136 3 -> 2
+[ZONE TRANSITION] t=620.00s vehicle=westbound_flow.145 4 -> 3
+[LSTM REFRESH] t=620.00s provider=eastbound_flow.149 zone=0 predicted_remaining=14.62s elapsed=534.00s
+[ZONE TRANSITION] t=621.00s vehicle=eastbound_flow.118 3 -> 4
+[ZONE TRANSITION] t=622.00s vehicle=eastbound_flow.146 0 -> 1
+[ZONE TRANSITION] t=622.00s vehicle=westbound_flow.146 4 -> 3
+[ZONE TRANSITION] t=623.00s vehicle=eastbound_flow.111 3 -> 4
+[ZONE TRANSITION] t=623.00s vehicle=westbound_flow.117 1 -> 0
+[ZONE TRANSITION] t=624.00s vehicle=westbound_flow.128 2 -> 1
+[ZONE TRANSITION] t=625.00s vehicle=eastbound_flow.119 3 -> 4
+[ZONE TRANSITION] t=625.00s vehicle=westbound_flow.119 1 -> 0
+[ZONE TRANSITION] t=625.00s vehicle=westbound_flow.137 3 -> 2
+[ZONE TRANSITION] t=626.00s vehicle=eastbound_flow.147 0 -> 1
+[ZONE TRANSITION] t=627.00s vehicle=westbound_flow.135 3 -> 2
+[ZONE TRANSITION] t=627.00s vehicle=westbound_flow.138 3 -> 2
+[ZONE TRANSITION] t=628.00s vehicle=eastbound_flow.128 2 -> 3
+[ZONE TRANSITION] t=628.00s vehicle=eastbound_flow.129 2 -> 3
+[ZONE TRANSITION] t=628.00s vehicle=westbound_flow.125 2 -> 1
+[ZONE TRANSITION] t=628.00s vehicle=westbound_flow.147 4 -> 3
+[ZONE TRANSITION] t=629.00s vehicle=westbound_flow.120 1 -> 0
+[ZONE TRANSITION] t=630.00s vehicle=eastbound_flow.148 0 -> 1
+
+[PREDICTIVE HANDOVER TRIGGER]
+  Time       : 630.00s
+  Provider   : eastbound_flow.149
+  Zone       : 0
+  LSTM prediction: 4.80s
+  Margin     : 5.00s
+
+[PRE-DEPARTURE HANDOVER]
+  Handover #     : 22
+  Source provider : eastbound_flow.149
+  Standby provider: eastbound_flow.130
+  Source zone     : 0
+  Standby zone    : 2
+  Standby CPU     : 8.00
+  LSTM residency  : 36.59s
+  Security        : VERIFIED
+  Resource        : CONTINUOUS
+[HANDOVER RESULT] SUCCESS
+[NEW PRIMARY] Provider=eastbound_flow.130 Prediction=36.59s
+[ZONE TRANSITION] t=631.00s vehicle=westbound_flow.148 4 -> 3
+[ZONE TRANSITION] t=632.00s vehicle=eastbound_flow.117 3 -> 4
+[ZONE TRANSITION] t=632.00s vehicle=eastbound_flow.139 1 -> 2
+[ZONE TRANSITION] t=632.00s vehicle=westbound_flow.130 2 -> 1
+[ZONE TRANSITION] t=633.00s vehicle=westbound_flow.139 3 -> 2
+[ZONE TRANSITION] t=634.00s vehicle=westbound_flow.121 1 -> 0
+[ZONE TRANSITION] t=634.00s vehicle=westbound_flow.149 4 -> 3
+[ZONE TRANSITION] t=635.00s vehicle=eastbound_flow.127 2 -> 3
+[ZONE TRANSITION] t=635.00s vehicle=eastbound_flow.149 0 -> 1
+[ZONE TRANSITION] t=635.00s vehicle=westbound_flow.140 3 -> 2
+[ZONE TRANSITION] t=636.00s vehicle=eastbound_flow.120 3 -> 4
+[ZONE TRANSITION] t=636.00s vehicle=eastbound_flow.131 2 -> 3
+[ZONE TRANSITION] t=636.00s vehicle=eastbound_flow.137 1 -> 2
+[ZONE TRANSITION] t=636.00s vehicle=eastbound_flow.140 1 -> 2
+[ZONE TRANSITION] t=637.00s vehicle=eastbound_flow.122 3 -> 4
+[ZONE TRANSITION] t=637.00s vehicle=westbound_flow.122 1 -> 0
+[ZONE TRANSITION] t=638.00s vehicle=eastbound_flow.121 3 -> 4
+[ZONE TRANSITION] t=638.00s vehicle=eastbound_flow.138 1 -> 2
+[ZONE TRANSITION] t=639.00s vehicle=westbound_flow.141 3 -> 2
+[ZONE TRANSITION] t=640.00s vehicle=eastbound_flow.132 2 -> 3
+[ZONE TRANSITION] t=640.00s vehicle=westbound_flow.118 1 -> 0
+[LSTM REFRESH] t=640.00s provider=eastbound_flow.130 zone=2 predicted_remaining=29.66s elapsed=554.00s
+[ZONE TRANSITION] t=641.00s vehicle=westbound_flow.123 1 -> 0
+[ZONE TRANSITION] t=641.00s vehicle=westbound_flow.131 2 -> 1
+[ZONE TRANSITION] t=643.00s vehicle=eastbound_flow.141 1 -> 2
+[ZONE TRANSITION] t=643.00s vehicle=westbound_flow.142 3 -> 2
+[ZONE TRANSITION] t=644.00s vehicle=westbound_flow.124 1 -> 0
+[ZONE TRANSITION] t=644.00s vehicle=westbound_flow.132 2 -> 1
+[ZONE TRANSITION] t=645.00s vehicle=eastbound_flow.123 3 -> 4
+[ZONE TRANSITION] t=645.00s vehicle=eastbound_flow.124 3 -> 4
+[ZONE TRANSITION] t=646.00s vehicle=eastbound_flow.133 2 -> 3
+[ZONE TRANSITION] t=648.00s vehicle=westbound_flow.134 2 -> 1
+[ZONE TRANSITION] t=649.00s vehicle=eastbound_flow.143 1 -> 2
+[ZONE TRANSITION] t=650.00s vehicle=westbound_flow.129 2 -> 1
+[LSTM REFRESH] t=650.00s provider=eastbound_flow.130 zone=2 predicted_remaining=19.66s elapsed=564.00s
+[ZONE TRANSITION] t=651.00s vehicle=eastbound_flow.144 1 -> 2
+[ZONE TRANSITION] t=651.00s vehicle=westbound_flow.144 3 -> 2
+[ZONE TRANSITION] t=652.00s vehicle=eastbound_flow.134 2 -> 3
+[ZONE TRANSITION] t=654.00s vehicle=westbound_flow.133 2 -> 1
+[ZONE TRANSITION] t=655.00s vehicle=eastbound_flow.126 3 -> 4
+[ZONE TRANSITION] t=656.00s vehicle=eastbound_flow.135 2 -> 3
+[ZONE TRANSITION] t=656.00s vehicle=eastbound_flow.136 2 -> 3
+[ZONE TRANSITION] t=656.00s vehicle=westbound_flow.126 1 -> 0
+[ZONE TRANSITION] t=656.00s vehicle=westbound_flow.143 3 -> 2
+[ZONE TRANSITION] t=657.00s vehicle=eastbound_flow.145 1 -> 2
+[ZONE TRANSITION] t=658.00s vehicle=westbound_flow.136 2 -> 1
+[ZONE TRANSITION] t=658.00s vehicle=westbound_flow.145 3 -> 2
+[ZONE TRANSITION] t=659.00s vehicle=eastbound_flow.146 1 -> 2
+[ZONE TRANSITION] t=659.00s vehicle=westbound_flow.146 3 -> 2
+[ZONE TRANSITION] t=660.00s vehicle=eastbound_flow.125 3 -> 4
+[LSTM REFRESH] t=660.00s provider=eastbound_flow.130 zone=2 predicted_remaining=10.20s elapsed=574.00s
+[ZONE TRANSITION] t=661.00s vehicle=westbound_flow.128 1 -> 0
+[ZONE TRANSITION] t=663.00s vehicle=eastbound_flow.147 1 -> 2
+[ZONE TRANSITION] t=664.00s vehicle=westbound_flow.138 2 -> 1
+[ZONE TRANSITION] t=665.00s vehicle=eastbound_flow.129 3 -> 4
+[ZONE TRANSITION] t=665.00s vehicle=westbound_flow.137 2 -> 1
+[ZONE TRANSITION] t=666.00s vehicle=westbound_flow.147 3 -> 2
+
+[PREDICTIVE HANDOVER TRIGGER]
+  Time       : 666.00s
+  Provider   : eastbound_flow.130
+  Zone       : 2
+  LSTM prediction: 4.31s
+  Margin     : 5.00s
+
+[PRE-DEPARTURE HANDOVER]
+  Handover #     : 23
+  Source provider : eastbound_flow.130
+  Standby provider: westbound_flow.143
+  Source zone     : 2
+  Standby zone    : 2
+  Standby CPU     : 12.00
+  LSTM residency  : 32.18s
+  Security        : VERIFIED
+  Resource        : CONTINUOUS
+[HANDOVER RESULT] SUCCESS
+[NEW PRIMARY] Provider=westbound_flow.143 Prediction=32.18s
+[ZONE TRANSITION] t=667.00s vehicle=eastbound_flow.128 3 -> 4
+[ZONE TRANSITION] t=667.00s vehicle=eastbound_flow.142 1 -> 2
+[ZONE TRANSITION] t=667.00s vehicle=eastbound_flow.148 1 -> 2
+[ZONE TRANSITION] t=667.00s vehicle=westbound_flow.127 2 -> 1
+[ZONE TRANSITION] t=668.00s vehicle=westbound_flow.148 3 -> 2
+[ZONE TRANSITION] t=669.00s vehicle=eastbound_flow.139 2 -> 3
+[ZONE TRANSITION] t=669.00s vehicle=westbound_flow.130 1 -> 0
+[ZONE TRANSITION] t=670.00s vehicle=eastbound_flow.130 2 -> 3
+[ZONE TRANSITION] t=670.00s vehicle=westbound_flow.125 1 -> 0
+[ZONE TRANSITION] t=670.00s vehicle=westbound_flow.135 2 -> 1
+[LSTM REFRESH] t=670.00s provider=westbound_flow.143 zone=2 predicted_remaining=28.22s elapsed=584.00s
+[ZONE TRANSITION] t=671.00s vehicle=westbound_flow.149 3 -> 2
+[ZONE TRANSITION] t=672.00s vehicle=eastbound_flow.149 1 -> 2
+[ZONE TRANSITION] t=672.00s vehicle=westbound_flow.139 2 -> 1
+[ZONE TRANSITION] t=672.00s vehicle=westbound_flow.140 2 -> 1
+[ZONE TRANSITION] t=673.00s vehicle=eastbound_flow.131 3 -> 4
+[ZONE TRANSITION] t=673.00s vehicle=eastbound_flow.140 2 -> 3
+[ZONE TRANSITION] t=676.00s vehicle=westbound_flow.141 2 -> 1
+[ZONE TRANSITION] t=677.00s vehicle=eastbound_flow.127 3 -> 4
+[ZONE TRANSITION] t=677.00s vehicle=eastbound_flow.132 3 -> 4
+[ZONE TRANSITION] t=679.00s vehicle=eastbound_flow.137 2 -> 3
+[ZONE TRANSITION] t=679.00s vehicle=westbound_flow.131 1 -> 0
+[ZONE TRANSITION] t=680.00s vehicle=westbound_flow.142 2 -> 1
+[LSTM REFRESH] t=680.00s provider=westbound_flow.143 zone=2 predicted_remaining=18.18s elapsed=594.00s
+[ZONE TRANSITION] t=681.00s vehicle=eastbound_flow.138 2 -> 3
+[ZONE TRANSITION] t=682.00s vehicle=eastbound_flow.141 2 -> 3
+[ZONE TRANSITION] t=683.00s vehicle=westbound_flow.132 1 -> 0
+[ZONE TRANSITION] t=684.00s vehicle=eastbound_flow.133 3 -> 4
+[ZONE TRANSITION] t=685.00s vehicle=westbound_flow.134 1 -> 0
+[ZONE TRANSITION] t=686.00s vehicle=eastbound_flow.143 2 -> 3
+[ZONE TRANSITION] t=688.00s vehicle=eastbound_flow.144 2 -> 3
+[ZONE TRANSITION] t=688.00s vehicle=westbound_flow.144 2 -> 1
+[LSTM REFRESH] t=690.00s provider=westbound_flow.143 zone=2 predicted_remaining=7.95s elapsed=604.00s
+[ZONE TRANSITION] t=691.00s vehicle=eastbound_flow.134 3 -> 4
+[ZONE TRANSITION] t=693.00s vehicle=eastbound_flow.136 3 -> 4
+
+[PREDICTIVE HANDOVER TRIGGER]
+  Time       : 693.00s
+  Provider   : westbound_flow.143
+  Zone       : 2
+  LSTM prediction: 4.85s
+  Margin     : 5.00s
+
+[PRE-DEPARTURE HANDOVER]
+  Handover #     : 24
+  Source provider : westbound_flow.143
+  Standby provider: eastbound_flow.142
+  Source zone     : 2
+  Standby zone    : 2
+  Standby CPU     : 8.00
+  LSTM residency  : 23.21s
+  Security        : VERIFIED
+  Resource        : CONTINUOUS
+[HANDOVER RESULT] SUCCESS
+[NEW PRIMARY] Provider=eastbound_flow.142 Prediction=23.21s
+[ZONE TRANSITION] t=694.00s vehicle=eastbound_flow.135 3 -> 4
+[ZONE TRANSITION] t=694.00s vehicle=westbound_flow.129 1 -> 0
+[ZONE TRANSITION] t=695.00s vehicle=eastbound_flow.145 2 -> 3
+[ZONE TRANSITION] t=696.00s vehicle=eastbound_flow.146 2 -> 3
+[ZONE TRANSITION] t=696.00s vehicle=westbound_flow.133 1 -> 0
+[ZONE TRANSITION] t=696.00s vehicle=westbound_flow.136 1 -> 0
+[ZONE TRANSITION] t=696.00s vehicle=westbound_flow.146 2 -> 1
+[ZONE TRANSITION] t=698.00s vehicle=westbound_flow.143 2 -> 1
+[ZONE TRANSITION] t=698.00s vehicle=westbound_flow.145 2 -> 1
+[ZONE TRANSITION] t=700.00s vehicle=eastbound_flow.147 2 -> 3
+[LSTM REFRESH] t=700.00s provider=eastbound_flow.142 zone=2 predicted_remaining=16.07s elapsed=614.00s
+[ZONE TRANSITION] t=701.00s vehicle=westbound_flow.138 1 -> 0
+[ZONE TRANSITION] t=703.00s vehicle=westbound_flow.137 1 -> 0
+[ZONE TRANSITION] t=704.00s vehicle=eastbound_flow.148 2 -> 3
+[ZONE TRANSITION] t=705.00s vehicle=westbound_flow.147 2 -> 1
+[ZONE TRANSITION] t=706.00s vehicle=westbound_flow.148 2 -> 1
+[ZONE TRANSITION] t=707.00s vehicle=eastbound_flow.139 3 -> 4
+[ZONE TRANSITION] t=708.00s vehicle=westbound_flow.149 2 -> 1
+[ZONE TRANSITION] t=709.00s vehicle=westbound_flow.140 1 -> 0
+[ZONE TRANSITION] t=710.00s vehicle=eastbound_flow.140 3 -> 4
+[ZONE TRANSITION] t=710.00s vehicle=eastbound_flow.149 2 -> 3
+[LSTM REFRESH] t=710.00s provider=eastbound_flow.142 zone=2 predicted_remaining=6.62s elapsed=624.00s
+[ZONE TRANSITION] t=711.00s vehicle=westbound_flow.139 1 -> 0
+
+[PREDICTIVE HANDOVER TRIGGER]
+  Time       : 712.00s
+  Provider   : eastbound_flow.142
+  Zone       : 2
+  LSTM prediction: 4.62s
+  Margin     : 5.00s
+
+[PRE-DEPARTURE HANDOVER]
+  Handover #     : 25
+  Source provider : eastbound_flow.142
+  Standby provider: westbound_flow.143
+  Source zone     : 2
+  Standby zone    : 1
+  Standby CPU     : 12.00
+  LSTM residency  : 27.89s
+  Security        : VERIFIED
+  Resource        : CONTINUOUS
+[HANDOVER RESULT] SUCCESS
+[NEW PRIMARY] Provider=westbound_flow.143 Prediction=27.89s
+[ZONE TRANSITION] t=713.00s vehicle=westbound_flow.141 1 -> 0
+[ZONE TRANSITION] t=714.00s vehicle=westbound_flow.135 1 -> 0
+[ZONE TRANSITION] t=716.00s vehicle=eastbound_flow.142 2 -> 3
+[ZONE TRANSITION] t=717.00s vehicle=westbound_flow.142 1 -> 0
+[ZONE TRANSITION] t=719.00s vehicle=eastbound_flow.130 3 -> 4
+[ZONE TRANSITION] t=719.00s vehicle=westbound_flow.127 1 -> 0
+[LSTM REFRESH] t=720.00s provider=westbound_flow.143 zone=1 predicted_remaining=19.85s elapsed=634.00s
+[ZONE TRANSITION] t=721.00s vehicle=eastbound_flow.141 3 -> 4
+[ZONE TRANSITION] t=722.00s vehicle=eastbound_flow.137 3 -> 4
+[ZONE TRANSITION] t=724.00s vehicle=eastbound_flow.138 3 -> 4
+[ZONE TRANSITION] t=725.00s vehicle=eastbound_flow.144 3 -> 4
+[ZONE TRANSITION] t=725.00s vehicle=westbound_flow.144 1 -> 0
+[ZONE TRANSITION] t=726.00s vehicle=eastbound_flow.143 3 -> 4
+[LSTM REFRESH] t=730.00s provider=westbound_flow.143 zone=1 predicted_remaining=9.48s elapsed=644.00s
+[ZONE TRANSITION] t=733.00s vehicle=eastbound_flow.145 3 -> 4
+[ZONE TRANSITION] t=733.00s vehicle=eastbound_flow.146 3 -> 4
+[ZONE TRANSITION] t=733.00s vehicle=westbound_flow.146 1 -> 0
+
+[PREDICTIVE HANDOVER TRIGGER]
+  Time       : 735.00s
+  Provider   : westbound_flow.143
+  Zone       : 1
+  LSTM prediction: 4.42s
+  Margin     : 5.00s
+
+[PRE-DEPARTURE HANDOVER]
+  Handover #     : 26
+  Source provider : westbound_flow.143
+  Standby provider: westbound_flow.149
+  Source zone     : 1
+  Standby zone    : 1
+  Standby CPU     : 12.00
+  LSTM residency  : 10.32s
+  Security        : VERIFIED
+  Resource        : CONTINUOUS
+[HANDOVER RESULT] SUCCESS
+[NEW PRIMARY] Provider=westbound_flow.149 Prediction=10.32s
+[ZONE TRANSITION] t=736.00s vehicle=westbound_flow.145 1 -> 0
+[ZONE TRANSITION] t=737.00s vehicle=eastbound_flow.147 3 -> 4
+[ZONE TRANSITION] t=739.00s vehicle=westbound_flow.143 1 -> 0
+[LSTM REFRESH] t=740.00s provider=westbound_flow.149 zone=1 predicted_remaining=5.42s elapsed=654.00s
+[ZONE TRANSITION] t=741.00s vehicle=eastbound_flow.148 3 -> 4
+
+[PREDICTIVE HANDOVER TRIGGER]
+  Time       : 741.00s
+  Provider   : westbound_flow.149
+  Zone       : 1
+  LSTM prediction: 4.13s
+  Margin     : 5.00s
+
+[PRE-DEPARTURE HANDOVER]
+  Handover #     : 27
+  Source provider : westbound_flow.149
+  Standby provider: eastbound_flow.142
+  Source zone     : 1
+  Standby zone    : 3
+  Standby CPU     : 8.00
+  LSTM residency  : 24.44s
+  Security        : VERIFIED
+  Resource        : CONTINUOUS
+[HANDOVER RESULT] SUCCESS
+[NEW PRIMARY] Provider=eastbound_flow.142 Prediction=24.44s
+[ZONE TRANSITION] t=743.00s vehicle=westbound_flow.147 1 -> 0
+[ZONE TRANSITION] t=744.00s vehicle=westbound_flow.148 1 -> 0
+[ZONE TRANSITION] t=745.00s vehicle=westbound_flow.149 1 -> 0
+[ZONE TRANSITION] t=748.00s vehicle=eastbound_flow.149 3 -> 4
+[LSTM REFRESH] t=750.00s provider=eastbound_flow.142 zone=3 predicted_remaining=15.26s elapsed=664.00s
+[LSTM REFRESH] t=760.00s provider=eastbound_flow.142 zone=3 predicted_remaining=5.92s elapsed=674.00s
+
+[PREDICTIVE HANDOVER TRIGGER]
+  Time       : 761.00s
+  Provider   : eastbound_flow.142
+  Zone       : 3
+  LSTM prediction: 4.91s
+  Margin     : 5.00s
+[STANDBY] No suitable secure standby found.
+[REACTIVE FALLBACK] Required.
+
+[PREDICTIVE HANDOVER TRIGGER]
+  Time       : 762.00s
+  Provider   : eastbound_flow.142
+  Zone       : 3
+  LSTM prediction: 3.78s
+  Margin     : 5.00s
+[STANDBY] No suitable secure standby found.
+[REACTIVE FALLBACK] Required.
+
+[PREDICTIVE HANDOVER TRIGGER]
+  Time       : 763.00s
+  Provider   : eastbound_flow.142
+  Zone       : 3
+  LSTM prediction: 2.83s
+  Margin     : 5.00s
+[STANDBY] No suitable secure standby found.
+[REACTIVE FALLBACK] Required.
+
+[PREDICTIVE HANDOVER TRIGGER]
+  Time       : 764.00s
+  Provider   : eastbound_flow.142
+  Zone       : 3
+  LSTM prediction: 1.85s
+  Margin     : 5.00s
+[STANDBY] No suitable secure standby found.
+[REACTIVE FALLBACK] Required.
+[ZONE TRANSITION] t=765.00s vehicle=eastbound_flow.142 3 -> 4
+
+============================================================
+FINAL STATE
+============================================================
+Primary provider          : eastbound_flow.142
+LSTM predicted residency  : 1.85s
+Total handovers           : 27
+Last standby provider     : eastbound_flow.142
+============================================================
+

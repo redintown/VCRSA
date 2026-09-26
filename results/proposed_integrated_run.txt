@@ -1,0 +1,81 @@
+
+============================================================
+ PROPOSED VCRSA INTEGRATED SIMULATION
+============================================================
+
+[1] Loading SUMO mobility...
+Mobility records : 57634
+
+[2] Loading LSTM predictions...
+Prediction records : 35323
+
+Evaluation time : 100 s
+
+[3] Building security-qualified provider pool...
+Qualified providers : 23
+
+Admission summary:
+  FULL        : 3
+  PROVISIONAL : 20
+  REJECT      : 0
+
+Providers by zone:
+  Zone 0 : 5
+  Zone 1 : 4
+  Zone 2 : 6
+  Zone 3 : 4
+  Zone 4 : 4
+
+[4] Building resource clusters...
+Resource clusters : 15
+
+[5] RCH / Deputy election
+  Zone 0 | CPU | members=5 | capacity=36.00 | RCH=eastbound_flow.22 | Deputy=eastbound_flow.20
+  Zone 0 | MEMORY | members=5 | capacity=80.00 | RCH=eastbound_flow.22 | Deputy=eastbound_flow.20
+  Zone 0 | STORAGE | members=5 | capacity=1280.00 | RCH=eastbound_flow.22 | Deputy=eastbound_flow.20
+  Zone 1 | CPU | members=4 | capacity=36.00 | RCH=eastbound_flow.11 | Deputy=eastbound_flow.8
+  Zone 1 | MEMORY | members=4 | capacity=88.00 | RCH=eastbound_flow.11 | Deputy=eastbound_flow.8
+  Zone 1 | STORAGE | members=4 | capacity=1408.00 | RCH=eastbound_flow.11 | Deputy=eastbound_flow.8
+  Zone 2 | CPU | members=6 | capacity=40.00 | RCH=eastbound_flow.2 | Deputy=westbound_flow.1
+  Zone 2 | MEMORY | members=6 | capacity=88.00 | RCH=eastbound_flow.2 | Deputy=westbound_flow.1
+  Zone 2 | STORAGE | members=6 | capacity=1408.00 | RCH=eastbound_flow.2 | Deputy=westbound_flow.1
+  Zone 3 | CPU | members=4 | capacity=36.00 | RCH=westbound_flow.11 | Deputy=westbound_flow.8
+  Zone 3 | MEMORY | members=4 | capacity=88.00 | RCH=westbound_flow.11 | Deputy=westbound_flow.8
+  Zone 3 | STORAGE | members=4 | capacity=1408.00 | RCH=westbound_flow.11 | Deputy=westbound_flow.8
+  Zone 4 | CPU | members=4 | capacity=32.00 | RCH=westbound_flow.20 | Deputy=westbound_flow.22
+  Zone 4 | MEMORY | members=4 | capacity=72.00 | RCH=westbound_flow.20 | Deputy=westbound_flow.22
+  Zone 4 | STORAGE | members=4 | capacity=1152.00 | RCH=westbound_flow.20 | Deputy=westbound_flow.22
+
+[6] Resource request
+  CPU     : 20.00
+  MEMORY  : 40.00 GB
+  STORAGE : 500.00 GB
+
+Zone 0 eligible providers : 5
+
+[7] Greedy multi-resource allocation
+  Provider=eastbound_flow.22 CPU=7.20 MEM=14.40 STORAGE=230.40 residency=25.87 score=0.62
+  Provider=eastbound_flow.20 CPU=10.80 MEM=25.60 STORAGE=269.60 residency=17.74 score=0.62
+  Provider=eastbound_flow.21 CPU=2.00 MEM=0.00 STORAGE=0.00 residency=22.22 score=0.52
+
+Allocated totals:
+  CPU     : 20.00 / 20.00
+  MEMORY  : 40.00 / 40.00
+  STORAGE : 500.00 / 500.00
+
+[8] PRT tenancy
+  Tenancy duration : 17.74 s
+  Duration bounded by shortest provider residency.
+
+============================================================
+ VALIDATION SUMMARY
+============================================================
+Security-qualified providers : PASS
+Resource clustering          : PASS
+RCH election                 : PASS
+Greedy allocation             : PASS
+PRT tenancy                  : PASS
+
+============================================================
+ PROPOSED INTEGRATED SIMULATION COMPLETE
+============================================================

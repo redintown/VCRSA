@@ -1,0 +1,171 @@
+
+============================================================
+ PROPOSED VCRSA INTEGRATED SIMULATION
+============================================================
+
+[1] Loading SUMO mobility...
+Mobility records : 57634
+
+[2] Loading LSTM predictions...
+Prediction records : 35323
+
+Evaluation time : 100 s
+
+[3] Building security-qualified provider pool...
+
+Security gate results:
+  Trust rejected    : 1
+  Position rejected : 1
+  PoR rejected      : 1
+  Admission rejected: 8
+Qualified providers : 20
+
+Admission summary:
+  FULL        : 3
+  PROVISIONAL : 17
+  REJECT      : 0
+
+Providers by zone:
+  Zone 0 : 2
+  Zone 1 : 4
+  Zone 2 : 6
+  Zone 3 : 4
+  Zone 4 : 4
+
+[4] Building resource clusters...
+Resource clusters : 15
+
+[5] RCH / Deputy election
+  Zone 0 | CPU | members=2 | capacity=16.00 | RCH=eastbound_flow.22 | Deputy=eastbound_flow.19
+  Zone 0 | MEMORY | members=2 | capacity=32.00 | RCH=eastbound_flow.22 | Deputy=eastbound_flow.19
+  Zone 0 | STORAGE | members=2 | capacity=512.00 | RCH=eastbound_flow.22 | Deputy=eastbound_flow.19
+  Zone 1 | CPU | members=4 | capacity=36.00 | RCH=eastbound_flow.11 | Deputy=eastbound_flow.8
+  Zone 1 | MEMORY | members=4 | capacity=88.00 | RCH=eastbound_flow.11 | Deputy=eastbound_flow.8
+  Zone 1 | STORAGE | members=4 | capacity=1408.00 | RCH=eastbound_flow.11 | Deputy=eastbound_flow.8
+  Zone 2 | CPU | members=6 | capacity=40.00 | RCH=eastbound_flow.2 | Deputy=westbound_flow.1
+  Zone 2 | MEMORY | members=6 | capacity=88.00 | RCH=eastbound_flow.2 | Deputy=westbound_flow.1
+  Zone 2 | STORAGE | members=6 | capacity=1408.00 | RCH=eastbound_flow.2 | Deputy=westbound_flow.1
+  Zone 3 | CPU | members=4 | capacity=36.00 | RCH=westbound_flow.11 | Deputy=westbound_flow.8
+  Zone 3 | MEMORY | members=4 | capacity=88.00 | RCH=westbound_flow.11 | Deputy=westbound_flow.8
+  Zone 3 | STORAGE | members=4 | capacity=1408.00 | RCH=westbound_flow.11 | Deputy=westbound_flow.8
+  Zone 4 | CPU | members=4 | capacity=32.00 | RCH=westbound_flow.20 | Deputy=westbound_flow.22
+  Zone 4 | MEMORY | members=4 | capacity=72.00 | RCH=westbound_flow.20 | Deputy=westbound_flow.22
+  Zone 4 | STORAGE | members=4 | capacity=1152.00 | RCH=westbound_flow.20 | Deputy=westbound_flow.22
+
+[5.1] RCH departure and deputy failover
+  FAILOVER | Zone 0 | CPU | departed RCH=eastbound_flow.22 | new RCH=eastbound_flow.19 | new Deputy=NONE
+  FAILOVER | Zone 0 | MEMORY | departed RCH=eastbound_flow.22 | new RCH=eastbound_flow.19 | new Deputy=NONE
+  FAILOVER | Zone 0 | STORAGE | departed RCH=eastbound_flow.22 | new RCH=eastbound_flow.19 | new Deputy=NONE
+  FAILOVER | Zone 1 | CPU | departed RCH=eastbound_flow.11 | new RCH=eastbound_flow.8 | new Deputy=eastbound_flow.10
+  FAILOVER | Zone 1 | MEMORY | departed RCH=eastbound_flow.11 | new RCH=eastbound_flow.8 | new Deputy=eastbound_flow.10
+  FAILOVER | Zone 1 | STORAGE | departed RCH=eastbound_flow.11 | new RCH=eastbound_flow.8 | new Deputy=eastbound_flow.10
+  FAILOVER | Zone 2 | CPU | departed RCH=eastbound_flow.2 | new RCH=westbound_flow.1 | new Deputy=eastbound_flow.1
+  FAILOVER | Zone 2 | MEMORY | departed RCH=eastbound_flow.2 | new RCH=westbound_flow.1 | new Deputy=eastbound_flow.1
+  FAILOVER | Zone 2 | STORAGE | departed RCH=eastbound_flow.2 | new RCH=westbound_flow.1 | new Deputy=eastbound_flow.1
+  FAILOVER | Zone 3 | CPU | departed RCH=westbound_flow.11 | new RCH=westbound_flow.8 | new Deputy=westbound_flow.10
+  FAILOVER | Zone 3 | MEMORY | departed RCH=westbound_flow.11 | new RCH=westbound_flow.8 | new Deputy=westbound_flow.10
+  FAILOVER | Zone 3 | STORAGE | departed RCH=westbound_flow.11 | new RCH=westbound_flow.8 | new Deputy=westbound_flow.10
+  FAILOVER | Zone 4 | CPU | departed RCH=westbound_flow.20 | new RCH=westbound_flow.22 | new Deputy=westbound_flow.19
+  FAILOVER | Zone 4 | MEMORY | departed RCH=westbound_flow.20 | new RCH=westbound_flow.22 | new Deputy=westbound_flow.19
+  FAILOVER | Zone 4 | STORAGE | departed RCH=westbound_flow.20 | new RCH=westbound_flow.22 | new Deputy=westbound_flow.19
+  Departed RCH providers : 5
+  RCH failover status : PASS
+
+[6] Resource request
+  CPU     : 20.00
+  MEMORY  : 40.00 GB
+  STORAGE : 500.00 GB
+
+Zone 0 eligible providers : 1
+
+[INTER-RESOURCE SEARCH]
+
+[7] Greedy multi-resource allocation
+  Provider=westbound_flow.11 CPU=5.83 MEM=15.55 STORAGE=248.83 residency=28.77 score=0.71
+  Provider=eastbound_flow.11 CPU=8.23 MEM=21.95 STORAGE=251.17 residency=20.80 score=0.64
+  Provider=eastbound_flow.2 CPU=5.94 MEM=2.49 STORAGE=0.00 residency=19.92 score=0.64
+
+Allocated totals:
+  CPU     : 20.00 / 20.00
+  MEMORY  : 40.00 / 40.00
+  STORAGE : 500.00 / 500.00
+
+[8] PRT tenancy
+  Tenancy duration : 19.92 s
+  Duration bounded by shortest provider residency.
+
+[9] Predictive provider departure / continuity
+  Departing provider : eastbound_flow.2
+  Predicted residency: 19.92 s
+  Allocated CPU       : 5.94
+  Allocated MEMORY    : 2.49
+  Allocated STORAGE   : 0.00
+  Standby provider    : westbound_flow.22
+  Standby residency   : 26.63 s
+  Standby security    : VERIFIED
+  Resource capacity   : SUFFICIENT
+  Handover result     : SUCCESS
+  Continuity          : PRESERVED
+
+[V6] Provider departure sweep
+  Case 1 | departing provider=westbound_flow.11 | residency=28.77 s
+
+[9] Predictive provider departure / continuity
+  Departing provider : westbound_flow.11
+  Predicted residency: 28.77 s
+  Allocated CPU       : 5.83
+  Allocated MEMORY    : 15.55
+  Allocated STORAGE   : 248.83
+  Standby provider    : eastbound_flow.8
+  Standby residency   : 17.11 s
+  Standby security    : VERIFIED
+  Resource capacity   : SUFFICIENT
+  Handover result     : SUCCESS
+  Continuity          : PRESERVED
+  Case 2 | departing provider=eastbound_flow.11 | residency=20.80 s
+
+[9] Predictive provider departure / continuity
+  Departing provider : eastbound_flow.11
+  Predicted residency: 20.80 s
+  Allocated CPU       : 8.23
+  Allocated MEMORY    : 21.95
+  Allocated STORAGE   : 251.17
+  Standby provider    : eastbound_flow.8
+  Standby residency   : 17.11 s
+  Standby security    : VERIFIED
+  Resource capacity   : SUFFICIENT
+  Handover result     : SUCCESS
+  Continuity          : PRESERVED
+  Case 3 | departing provider=eastbound_flow.2 | residency=19.92 s
+
+[9] Predictive provider departure / continuity
+  Departing provider : eastbound_flow.2
+  Predicted residency: 19.92 s
+  Allocated CPU       : 5.94
+  Allocated MEMORY    : 2.49
+  Allocated STORAGE   : 0.00
+  Standby provider    : westbound_flow.22
+  Standby residency   : 26.63 s
+  Standby security    : VERIFIED
+  Resource capacity   : SUFFICIENT
+  Handover result     : SUCCESS
+  Continuity          : PRESERVED
+
+  Departure cases      : 3
+  Successful handovers : 3
+  Failed handovers     : 0
+  Handover success rate: 100.00 %
+
+============================================================
+ VALIDATION SUMMARY
+============================================================
+Security-qualified providers : PASS
+Resource clustering          : PASS
+RCH election                 : PASS
+Greedy allocation             : PASS
+PRT tenancy                  : PASS
+Provider continuity          : PASS
+
+============================================================
+ PROPOSED INTEGRATED SIMULATION COMPLETE
+============================================================
