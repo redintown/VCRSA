@@ -1,0 +1,20 @@
+V7 Provider Departure Stress Evaluation
+=======================================
+
+Scenario:
+Controlled baseline-load provider departure stress test.
+
+Results:
+- Blocked standby candidates 0-14: HANDOVER SUCCESS
+- Blocked standby candidates 15: HANDOVER FAILED
+- Failure condition: no eligible standby provider remained
+- Continuity at failure: INTERRUPTED
+
+Interpretation:
+The predictive handover mechanism preserved continuity while at least one
+eligible standby provider remained available in this controlled scenario.
+When all 15 eligible standby candidates were unavailable, no replacement
+provider could be selected and continuity was interrupted.
+
+This is a controlled scenario-specific stress-test result, not a universal
+failure-tolerance bound.
