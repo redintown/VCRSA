@@ -1,287 +1,410 @@
+import os
 import sys
-from pathlib import Path
 
 import joblib
 import numpy as np
 import pandas as pd
 import torch
 
-ML_DIR = Path(__file__).resolve().parent
-PROJECT_DIR = ML_DIR.parent
-
-sys.path.insert(0, str(ML_DIR))
+# Allow importing lstm_model.py from ml/
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 from lstm_model import MobilityLSTM
 
 
-CSV_PATH = (
-    PROJECT_DIR
-    / "sumo"
-    / "datasets"
-    / "highway"
-    / "raw"
-    / "highway_mobility.csv"
+# ============================================================
+# Paths
+# ============================================================
+
+BASE_DIR = os.path.dirname(
+    os.path.dirname(os.path.abspath(__file__))
 )
 
-MODEL_PATH = (
-    ML_DIR
-    / "checkpoints"
-    / "best_highway_lstm.pt"
+SEQUENCE_FILE = os.path.join(
+    BASE_DIR,
+    "sumo",
+    "datasets",
+    "highway",
+    "processed",
+    "highway_lstm_sequences.csv",
 )
 
-SCALER_PATH = (
-    ML_DIR
-    / "highway_lstm_scaler.pkl"
+MODEL_FILE = os.path.join(
+    BASE_DIR,
+    "ml",
+    "checkpoints",
+    "best_highway_lstm.pt",
 )
 
-OUTPUT_PATH = (
-    PROJECT_DIR
-    / "sumo"
-    / "datasets"
-    / "highway"
-    / "processed"
-    / "highway_lstm_predictions.csv"
+SCALER_FILE = os.path.join(
+    BASE_DIR,
+    "ml",
+    "highway_lstm_scaler.pkl",
+)
+
+OUTPUT_FILE = os.path.join(
+    BASE_DIR,
+    "sumo",
+    "datasets",
+    "highway",
+    "processed",
+    "highway_lstm_predictions.csv",
 )
 
 
-def load_model():
+# ============================================================
+# Configuration
+# ============================================================
 
-    device = torch.device(
-        "cuda" if torch.cuda.is_available()
-        else "cpu"
+INPUT_SIZE = 8
+HIDDEN_SIZE = 64
+NUM_LAYERS = 2
+
+DEVICE = torch.device(
+    "cuda" if torch.cuda.is_available() else "cpu"
+)
+
+
+# ============================================================
+# Main
+# ============================================================
+
+def main():
+
+    print("=" * 70)
+    print("LSTM PREDICTION TRACE GENERATION")
+    print("=" * 70)
+
+    print()
+    print("Sequence file:")
+    print(SEQUENCE_FILE)
+
+    print()
+    print("Model:")
+    print(MODEL_FILE)
+
+    print()
+    print("Scaler:")
+    print(SCALER_FILE)
+
+    print()
+    print("Device:", DEVICE)
+
+    # --------------------------------------------------------
+    # Check files
+    # --------------------------------------------------------
+
+    for path in [
+        SEQUENCE_FILE,
+        MODEL_FILE,
+        SCALER_FILE,
+    ]:
+        if not os.path.exists(path):
+            raise FileNotFoundError(
+                f"Required file not found: {path}"
+            )
+
+    # --------------------------------------------------------
+    # Load sequence dataset
+    # --------------------------------------------------------
+
+    print()
+    print("Loading LSTM sequences...")
+
+    df = pd.read_csv(SEQUENCE_FILE)
+
+    print("Sequences:", len(df))
+
+    # --------------------------------------------------------
+    # Identify feature columns
+    # --------------------------------------------------------
+
+    feature_names = [
+        "x",
+        "y",
+        "speed",
+        "acceleration",
+        "heading",
+        "lane_id",
+        "direction",
+        "zone_id",
+    ]
+
+    sequence_feature_columns = []
+
+    for timestep in range(10):
+
+        for feature in feature_names:
+
+            column = f"t{timestep}_{feature}"
+
+            if column not in df.columns:
+                raise ValueError(
+                    f"Missing sequence column: {column}"
+                )
+
+            sequence_feature_columns.append(column)
+
+    # --------------------------------------------------------
+    # Extract metadata
+    # --------------------------------------------------------
+
+    metadata_columns = [
+        "vehicle_id",
+        "end_timestamp",
+        "zone_id",
+    ]
+
+    for column in metadata_columns:
+
+        if column not in df.columns:
+            raise ValueError(
+                f"Missing metadata column: {column}"
+            )
+
+    # --------------------------------------------------------
+    # Build X
+    # --------------------------------------------------------
+
+    X_flat = df[
+        sequence_feature_columns
+    ].values.astype(np.float32)
+
+    X = X_flat.reshape(
+        len(df),
+        10,
+        INPUT_SIZE
     )
 
+    print(
+        "Input shape:",
+        X.shape
+    )
+
+    # --------------------------------------------------------
+    # Load scaler
+    # --------------------------------------------------------
+
+    print()
+    print("Loading training scaler...")
+
+    scaler = joblib.load(
+        SCALER_FILE
+    )
+
+    # --------------------------------------------------------
+    # Scale exactly like training
+    # --------------------------------------------------------
+
+    X_2d = X.reshape(
+        -1,
+        INPUT_SIZE
+    )
+
+    X_scaled_2d = scaler.transform(
+        X_2d
+    )
+
+    X_scaled = X_scaled_2d.reshape(
+        len(df),
+        10,
+        INPUT_SIZE
+    ).astype(np.float32)
+
+    # --------------------------------------------------------
+    # Load model
+    # --------------------------------------------------------
+
+    print()
+    print("Loading trained LSTM...")
+
     model = MobilityLSTM(
-        input_size=8,
-        hidden_size=64,
-        num_layers=2,
+        input_size=INPUT_SIZE,
+        hidden_size=HIDDEN_SIZE,
+        num_layers=NUM_LAYERS,
         output_size=1,
     )
 
     checkpoint = torch.load(
-        MODEL_PATH,
-        map_location=device,
+        MODEL_FILE,
+        map_location=DEVICE,
+        weights_only=False,
     )
 
-    if (
-        isinstance(checkpoint, dict)
-        and "model_state_dict" in checkpoint
-    ):
-        model.load_state_dict(
-            checkpoint["model_state_dict"]
-        )
-    else:
-        model.load_state_dict(checkpoint)
+    # Handle either raw state_dict or checkpoint dict.
+    if isinstance(checkpoint, dict):
 
-    model.to(device)
+        if "model_state_dict" in checkpoint:
+
+            model.load_state_dict(
+                checkpoint["model_state_dict"]
+            )
+
+        elif "state_dict" in checkpoint:
+
+            model.load_state_dict(
+                checkpoint["state_dict"]
+            )
+
+        else:
+
+            # The saved object itself may be a state_dict.
+            model.load_state_dict(
+                checkpoint
+            )
+
+    else:
+
+        model.load_state_dict(
+            checkpoint
+        )
+
+    model.to(DEVICE)
+
     model.eval()
 
-    scaler = joblib.load(
-        SCALER_PATH
-    )
+    # --------------------------------------------------------
+    # Inference
+    # --------------------------------------------------------
 
-    return model, scaler, device
+    print()
+    print("Running LSTM inference...")
 
-
-def prepare_features(sequence):
-
-    direction_numeric = (
-        sequence["direction"]
-        .map(
-            {
-                "EAST": 1.0,
-                "WEST": -1.0,
-            }
-        )
-        .astype(float)
-    )
-
-    lane_numeric = (
-        sequence["lane_id"]
-        .str.extract(
-            r"_(\d+)$"
-        )[0]
-        .astype(float)
-    )
-
-    return np.column_stack(
-        [
-            sequence["x"].to_numpy(),
-            sequence["y"].to_numpy(),
-            sequence["speed"].to_numpy(),
-            sequence["acceleration"].to_numpy(),
-            sequence["heading"].to_numpy(),
-            lane_numeric.to_numpy(),
-            direction_numeric.to_numpy(),
-            sequence["zone_id"].to_numpy(),
-        ]
-    ).astype(np.float32)
-
-
-def main():
-
-    print("Loading mobility dataset...")
-
-    df = pd.read_csv(CSV_PATH)
-
-    model, scaler, device = load_model()
+    X_tensor = torch.from_numpy(
+        X_scaled
+    ).to(DEVICE)
 
     predictions = []
 
-    print(
-        f"Vehicles: {df['vehicle_id'].nunique()}"
-    )
+    batch_size = 512
 
-    # ------------------------------------------------------------
-    # Process each vehicle independently
-    # ------------------------------------------------------------
+    with torch.no_grad():
 
-    for vehicle_id, vehicle_df in df.groupby(
-        "vehicle_id"
-    ):
-
-        vehicle_df = vehicle_df.sort_values(
-            "timestamp"
-        )
-
-        # --------------------------------------------------------
-        # Process each zone separately
-        # --------------------------------------------------------
-
-        for zone_id, zone_df in vehicle_df.groupby(
-            "zone_id"
+        for start in range(
+            0,
+            len(X_tensor),
+            batch_size,
         ):
 
-            zone_df = zone_df.sort_values(
-                "timestamp"
-            ).reset_index(drop=True)
+            end = min(
+                start + batch_size,
+                len(X_tensor),
+            )
 
-            timestamps = zone_df[
-                "timestamp"
-            ].to_numpy()
+            batch = X_tensor[
+                start:end
+            ]
 
-            # Need exactly 10 consecutive 1-second samples.
-            for i in range(
-                len(zone_df) - 9
-            ):
+            output = model(
+                batch
+            )
 
-                window = timestamps[
-                    i:i + 10
-                ]
+            predictions.extend(
+                output.detach()
+                .cpu()
+                .numpy()
+                .tolist()
+            )
 
-                if not np.allclose(
-                    np.diff(window),
-                    1.0
-                ):
-                    continue
-
-                sequence = zone_df.iloc[
-                    i:i + 10
-                ]
-
-                features = prepare_features(
-                    sequence
-                )
-
-                scaled = scaler.transform(
-                    features
-                )
-
-                tensor = torch.tensor(
-                    scaled,
-                    dtype=torch.float32,
-                ).unsqueeze(0).to(device)
-
-                with torch.no_grad():
-
-                    prediction = model(
-                        tensor
-                    )
-
-                predicted_time = max(
-                    0.0,
-                    float(
-                        prediction.item()
-                    )
-                )
-
-                predictions.append(
-                    {
-                        "vehicle_id":
-                            vehicle_id,
-
-                        "timestamp":
-                            float(
-                                sequence[
-                                    "timestamp"
-                                ].iloc[-1]
-                            ),
-
-                        "zone_id":
-                            int(zone_id),
-
-                        "direction":
-                            sequence[
-                                "direction"
-                            ].iloc[-1],
-
-                        "predicted_residency":
-                            predicted_time,
-                    }
-                )
-
-    result = pd.DataFrame(
-        predictions
+    predictions = np.asarray(
+        predictions,
+        dtype=np.float64,
     )
 
-    result = result.sort_values(
+    # --------------------------------------------------------
+    # Safety clipping
+    # --------------------------------------------------------
+
+    predictions = np.maximum(
+        predictions,
+        0.0,
+    )
+
+    # --------------------------------------------------------
+    # Create output
+    # --------------------------------------------------------
+
+    output = pd.DataFrame(
+    {
+        "timestamp": df["end_timestamp"].values,
+        "vehicle_id": df["vehicle_id"].values,
+        "zone_id": df["zone_id"].values,
+        "predicted_residency": predictions,
+    }
+)
+
+    # Sort chronologically
+    output = output.sort_values(
         [
             "timestamp",
             "vehicle_id",
         ]
+    ).reset_index(
+        drop=True
     )
 
-    OUTPUT_PATH.parent.mkdir(
-        parents=True,
-        exist_ok=True
+    # --------------------------------------------------------
+    # Save
+    # --------------------------------------------------------
+
+    output.to_csv(
+        OUTPUT_FILE,
+        index=False,
     )
 
-    result.to_csv(
-        OUTPUT_PATH,
-        index=False
+    # --------------------------------------------------------
+    # Statistics
+    # --------------------------------------------------------
+
+    print()
+    print("=" * 70)
+    print("PREDICTION TRACE GENERATED")
+    print("=" * 70)
+
+    print(
+        "Output:",
+        OUTPUT_FILE
+    )
+
+    print(
+        "Prediction records:",
+        len(output)
+    )
+
+    print(
+        "Vehicles:",
+        output["vehicle_id"].nunique()
+    )
+
+    print(
+        "Prediction min:",
+        f"{predictions.min():.4f}s"
+    )
+
+    print(
+        "Prediction max:",
+        f"{predictions.max():.4f}s"
+    )
+
+    print(
+        "Prediction mean:",
+        f"{predictions.mean():.4f}s"
     )
 
     print()
-    print("=" * 60)
-    print("LSTM PREDICTION EXPORT")
-    print("=" * 60)
-
-    print(
-        f"Prediction rows : {len(result)}"
-    )
-
-    print(
-        f"Vehicles        : "
-        f"{result['vehicle_id'].nunique()}"
-    )
-
-    print(
-        f"Output          : {OUTPUT_PATH}"
-    )
-
-    print(
-        f"Device           : {device}"
-    )
-
+    print("First 10 predictions:")
     print()
 
     print(
-        result.head(10).to_string(
+        output.head(10).to_string(
             index=False
         )
     )
 
-    print("=" * 60)
+    print()
+    print("=" * 70)
+    print("DONE")
+    print("=" * 70)
 
 
 if __name__ == "__main__":
