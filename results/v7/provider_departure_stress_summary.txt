@@ -1,0 +1,41 @@
+V7 Provider Departure Stress Evaluation
+========================================
+
+Load profile: HEAVY
+
+Resource request:
+CPU     : 30
+MEMORY  : 60 GB
+STORAGE : 750 GB
+
+Departing provider:
+eastbound_flow.8
+
+Predicted residency:
+17.11 s
+
+Stress scenarios:
+Blocked standby candidates | Result
+0                          | SUCCESS
+1                          | FAILED
+2                          | FAILED
+3                          | FAILED
+4                          | FAILED
+5                          | FAILED
+6                          | FAILED
+
+Observed result:
+The handover succeeds when the selected standby candidate remains
+available. Blocking the first eligible standby candidate causes the
+handover to fail in this specific heavy-load provider configuration.
+
+Normal provider departure sweep:
+Cases       : 5
+Successful  : 5
+Failed      : 0
+Success rate: 100%
+
+Note:
+This is a deterministic stress experiment for the current provider
+configuration and should not be interpreted as a universal standby
+capacity limit.

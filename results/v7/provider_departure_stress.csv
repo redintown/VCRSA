@@ -1,0 +1,8 @@
+load_profile,blocked_candidates,departing_provider,predicted_residency,standby_provider,handover_result,continuity
+heavy,0,eastbound_flow.8,17.11,westbound_flow.8,SUCCESS,PRESERVED
+heavy,1,eastbound_flow.8,17.11,NONE,FAILED,INTERRUPTED
+heavy,2,eastbound_flow.8,17.11,NONE,FAILED,INTERRUPTED
+heavy,3,eastbound_flow.8,17.11,NONE,FAILED,INTERRUPTED
+heavy,4,eastbound_flow.8,17.11,NONE,FAILED,INTERRUPTED
+heavy,5,eastbound_flow.8,17.11,NONE,FAILED,INTERRUPTED
+heavy,6,eastbound_flow.8,17.11,NONE,FAILED,INTERRUPTED
