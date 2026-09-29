@@ -1,0 +1,3 @@
+scheme,requesterVehicle,requestTime,allocationTime,searchDelay,packets,success,searchMode,selectedProviders,searchEvents,candidateChecks
+RCSA,requester_0,120,127.011,7.01082,8,1,INTER_RESOURCE,5,2,6
+VCRSA,requester_0,120,125.005,5.00488,6,1,INTER_RESOURCE,3,2,30
